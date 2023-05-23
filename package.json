@@ -2,7 +2,14 @@
     "name": "Verkerk_EnergieDashboard",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-knx-ultimate": "1.3.46",
+        "node-red-contrib-modbus": "5.21.2",
+        "node-red-dashboard": "3.1.7",
+        "node-red-node-email": "1.15.1",
+        "node-red-node-openweathermap": "0.5.1",
+        "node-red-node-ui-table": "0.3.12"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
