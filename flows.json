@@ -2723,9 +2723,7 @@
         "x": 290,
         "y": 660,
         "wires": [
-            [
-                "0fc427c64be15578"
-            ]
+            []
         ]
     },
     {
@@ -4870,33 +4868,6 @@
         "x": 1220,
         "y": 2080,
         "wires": []
-    },
-    {
-        "id": "2edc89b5300663c7",
-        "type": "inject",
-        "z": "e7a7e61768dadc02",
-        "name": "VROEEET",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 580,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "b1456c6040d91a11",
