@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="126mm"
+   height="107mm"
+   viewBox="0 0 126 107"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="vssBG.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <style
+     id="style448" />
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="true"
+     showguides="true"
+     inkscape:zoom="1.9999999"
+     inkscape:cx="150.75001"
+     inkscape:cy="219.00001"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3238"
+       dotted="false"
+       snapvisiblegridlinesonly="true"
+       empspacing="3"
+       originx="0"
+       originy="0"
+       spacingx="0.26458333"
+       spacingy="0.26458333" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Laag 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g883"
+       inkscape:label="grpRm0.00 (onzichtbaar)">
+      <rect
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0528746;stroke-dasharray:none"
+         id="rectRm0.00"
+         width="10.31883"
+         height="20.637501"
+         x="38.629089"
+         y="-101.6"
+         transform="rotate(90)"
+         onmouseover=""
+         onmouseout="" />
+    </g>
+    <path
+       id="grpRm0.01"
+       style="fill:#cccccc;stroke:#000000;stroke-width:0.0529167;stroke-dasharray:none"
+       d="M 2.0820459,17.156578 9.0521629,45.736229 46.364098,36.636526 57.437327,74.040445 V 103.98125 H 101.99687 V 23.068362 l 23.47092,-8.948752 c 0,0 -10.28215,-2.64388 -23.13483,-5.6531483 C 89.480284,5.4571937 74.057068,4.2487587 63.774918,4.2331287 53.492772,4.2174987 38.069554,5.4962767 25.216873,8.4664617 12.364191,11.436648 2.0820459,17.156574 2.0820459,17.156574 Z"
+       sodipodi:nodetypes="ccccccccssscc"
+       onmouseover="" />
+    <g
+       id="grpRm0.12"
+       onmouseover="document.getElementById(&quot;rect2_5&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="document.getElementById(&quot;rect2_5&quot;).style.fill = &quot;#eee&quot;">
+      <path
+         id="rect2_5"
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0528063;stroke-dasharray:none"
+         d="M 63.36717,103.71667 H 101.6 V 49.212499 H 80.962499 l 0,1.5875 h -4.7625 l -0.04126,28.310426 -12.791021,-5e-6 z"
+         sodipodi:nodetypes="ccccccccc"
+         onmouseover=""
+         onmouseout="" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="84.383781"
+         y="92.592751"
+         id="valDisplay2_5"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938-37"
+           style="font-size:5.64444px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="84.383781"
+           y="92.592751">--,--</tspan></text>
+    </g>
+    <g
+       id="grpRm0.04"
+       onmouseover="document.getElementById(&quot;rect2_1&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="document.getElementById(&quot;rect2_1&quot;).style.fill = &quot;#eee&quot;">
+      <rect
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+         id="rect2_1"
+         width="12.435416"
+         height="19.022543"
+         x="63.5"
+         y="38.65662"
+         onmouseover=""
+         onmouseout="" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="69.805252"
+         y="50.048923"
+         id="valDisplay2_1"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938-3"
+           style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="69.805252"
+           y="50.048923">--,--</tspan></text>
+    </g>
+    <g
+       id="grpRm0.07"
+       onmouseover="document.getElementById(&quot;rect4_3&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="document.getElementById(&quot;rect4_3&quot;).style.fill = &quot;#eee&quot;">
+      <rect
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.054668;stroke-dasharray:none"
+         id="rect4_3"
+         width="12.942395"
+         height="16.668749"
+         x="63.257607"
+         y="5.556252"
+         onmouseover=""
+         onmouseout="" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="69.805252"
+         y="15.123923"
+         id="valDisplay4_3"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938-4"
+           style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="69.805252"
+           y="15.123923">--,--</tspan></text>
+    </g>
+    <g
+       id="grpRm0.08"
+       onmouseover="document.getElementById(&quot;rect4_4&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="document.getElementById(&quot;rect4_4&quot;).style.fill = &quot;#eee&quot;">
+      <path
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0529167;stroke-dasharray:none"
+         d="M 101.07083,22.224999 123.03125,14.2875 76.464582,5.5562499 V 22.224999 Z"
+         id="rect4_4"
+         onmouseover=""
+         onmouseout=""
+         sodipodi:nodetypes="ccccc" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="92.321281"
+         y="16.853794"
+         id="valDisplay4_4"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938-7"
+           style="font-size:5.64444px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="92.321281"
+           y="16.853794">--,--</tspan></text>
+    </g>
+    <g
+       id="grpRm0.03"
+       onmouseover="document.getElementById(&quot;rect4_2&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="">
+      <rect
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         id="rect4_2"
+         width="24.166533"
+         height="36.90974"
+         x="-43.492764"
+         y="-36.122864"
+         transform="matrix(-0.23683815,-0.97154913,-0.97154913,0.23683815,0,0)"
+         onmouseover=""
+         onmouseout=""
+         onclick="" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="25.4"
+         y="27.78125"
+         id="valDisplay4_2"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938"
+           style="font-size:5.64444px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="25.4"
+           y="27.78125">--,--</tspan></text>
+    </g>
+    <g
+       id="grpRm0.05"
+       onmouseover="document.getElementById(&quot;rect2_2&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="document.getElementById(&quot;rect2_2&quot;).style.fill = &quot;#eee&quot;">
+      <rect
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0534293;stroke-dasharray:none"
+         id="rect2_2"
+         width="12.408578"
+         height="12.255067"
+         x="63.526714"
+         y="57.85939"
+         onmouseover=""
+         onmouseout="" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="69.805244"
+         y="65.92392"
+         id="valDisplay2_2"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938-33"
+           style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="69.805244"
+           y="65.92392">--,--</tspan></text>
+    </g>
+    <g
+       id="grpRm0.06"
+       onmouseover="document.getElementById(&quot;rect2_3&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="document.getElementById(&quot;rect2_3&quot;).style.fill = &quot;#eee&quot;">
+      <rect
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0534871;stroke-dasharray:none"
+         id="rect2_3"
+         width="12.435419"
+         height="8.4852066"
+         x="63.5"
+         y="70.360626"
+         onmouseover=""
+         onmouseout="" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="69.805244"
+         y="75.896362"
+         id="valDisplay2_3"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938-8"
+           style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="69.805244"
+           y="75.896362">--,--</tspan></text>
+    </g>
+    <g
+       id="g5668"
+       onmouseover=""
+       onmouseout=""
+       inkscape:label="Verdieping 1">
+      <rect
+         style="fill:#b4113d;fill-opacity:1;stroke:#000000;stroke-width:0.0418072"
+         id="rect320-7"
+         width="17.47361"
+         height="7.9221554"
+         x="4.7513905"
+         y="85.724998"
+         ry="0.052861191"
+         onmouseover="style.fill = &quot;#eee&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="style.fill=&quot;#b4113d&quot;" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:2.82222px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:0.0529167"
+         x="13.49375"
+         y="88.900002"
+         id="text3910"><tspan
+           sodipodi:role="line"
+           id="tspan3908"
+           style="font-size:2.82222px;fill:#333333;fill-opacity:1;stroke-width:0.0529167"
+           x="13.49375"
+           y="88.900002">1e</tspan><tspan
+           sodipodi:role="line"
+           style="font-size:2.82222px;fill:#333333;fill-opacity:1;stroke-width:0.0529167"
+           x="13.49375"
+           y="92.42778"
+           id="tspan3912">Verdieping</tspan></text>
+    </g>
+    <g
+       id="g5674"
+       inkscape:label="Verdieping 0">
+      <rect
+         style="fill:#b4113d;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none"
+         id="rect320"
+         width="17.47361"
+         height="7.9221554"
+         x="4.7569451"
+         y="95.270905"
+         ry="0.052861191"
+         onmouseover="style.fill = &quot;#eee&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="style.fill=&quot;#b4113d&quot;" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:2.82222px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:0.0529167"
+         x="13.49375"
+         y="98.424995"
+         id="text3910-1"><tspan
+           sodipodi:role="line"
+           style="font-size:2.82222px;fill:#333333;fill-opacity:1;stroke-width:0.0529167"
+           x="13.49375"
+           y="98.424995"
+           id="tspan3912-7">Begane </tspan><tspan
+           sodipodi:role="line"
+           style="font-size:2.82222px;fill:#333333;fill-opacity:1;stroke-width:0.0529167"
+           x="13.49375"
+           y="101.95277"
+           id="tspan4889">grond</tspan></text>
+    </g>
+  </g>
+</svg>

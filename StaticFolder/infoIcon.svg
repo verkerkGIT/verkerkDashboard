@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="21.695356mm"
+   height="25.695999mm"
+   viewBox="0 0 21.695356 25.696"
+   version="1.1"
+   id="svgIcon"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="infoIcon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2003"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.9651515"
+     inkscape:cx="17.183134"
+     inkscape:cy="54.231649"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="HumGrp" />
+  <defs
+     id="defs1998" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="infoIconLayer"
+     transform="translate(-3.178892e-7,1.108871)">
+    <g
+       id="infoIconGrp"
+       inkscape:label="infoIcon"
+       transform="matrix(0.25178362,0,0,0.25179459,-3.8082272,-0.6974283)"
+       onmouseover=""
+       onmouseout="">
+      <g
+         id="TempGrp"
+         transform="matrix(0.17088864,0,0,0.17088864,40.69564,23.096762)"
+         style="fill:#ffffff;stroke-width:1.00065;stroke-dasharray:none"
+         inkscape:label="Temp"
+         onmouseover="document.getElementById(&quot;TempGrp&quot;).style.cursor = &quot;pointer&quot;;">
+        <path
+           id="path11933"
+           style="fill:#ff5555;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
+           d="M 58.208333,7.9375 A 42.333332,42.333332 0 0 0 15.875,50.270833 h 42.333333 z"
+           transform="matrix(5.8517641,0,0,5.8517641,-238.14128,-135.1568)"
+           inkscape:label="TempPart" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:90.187px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:2.06437;stroke-dasharray:none"
+           x="-11.970441"
+           y="92.511093"
+           id="text326"
+           inkscape:label="TempText"><tspan
+             sodipodi:role="line"
+             id="tspan324"
+             style="font-size:90.187px;stroke-width:2.06437;stroke-dasharray:none"
+             x="-11.970443"
+             y="92.511093">°C</tspan></text>
+      </g>
+      <g
+         id="HumGrp"
+         transform="translate(42.856686,-58.863299)"
+         inkscape:label="Hum"
+         onclick=""
+         onmouseover="document.getElementById(&quot;HumGrp&quot;).style.cursor = &quot;pointer&quot;;"
+         class="myObject"
+         onmouseout="">
+        <path
+           id="path11930"
+           style="fill:#57ffff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
+           d="M 58.208333,7.9375 V 50.270833 H 100.54167 A 42.333332,42.333332 0 0 0 58.208333,7.9375 Z"
+           transform="translate(-42.856686,58.863299)"
+           inkscape:label="HumPart" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:15.4119px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:0.352778;stroke-dasharray:none"
+           x="34.720093"
+           y="97.754105"
+           id="HVal"
+           inkscape:label="HumText"><tspan
+             sodipodi:role="line"
+             id="tspan324-7"
+             style="font-size:15.4119px;stroke-width:0.352778;stroke-dasharray:none"
+             x="34.720093"
+             y="97.754105">RV</tspan></text>
+      </g>
+      <g
+         id="CO2Grp"
+         transform="matrix(1.4161815,0,0,1.4161815,-60.38646,-68.355849)"
+         style="fill:#ffffff"
+         inkscape:label="CO2"
+         onmouseover="document.getElementById(&quot;CO2Grp&quot;).style.cursor = &quot;pointer&quot;;">
+        <path
+           id="path11919"
+           style="fill:#57ff57;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
+           d="M 100.54167,50.270833 H 58.208333 V 92.604167 A 42.333332,42.333332 0 0 0 100.54167,50.270833 Z"
+           transform="matrix(0.70612419,0,0,0.70612419,42.64034,48.267718)"
+           inkscape:label="CO2Part" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:9.89339546px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:0.169876;stroke-dasharray:none"
+           x="97.416763"
+           y="99.237953"
+           id="CVal"
+           inkscape:label="CO2Text"><tspan
+             sodipodi:role="line"
+             id="tspan324-7-6"
+             style="stroke-width:0.169876;stroke-dasharray:none;font-size:9.89339546px"
+             x="97.416763"
+             y="99.237953">CO2</tspan></text>
+      </g>
+      <g
+         id="LuxGrp"
+         transform="matrix(0.38555724,0,0,0.38555724,34.96357,8.7776193)"
+         inkscape:label="Lux"
+         onmouseover="document.getElementById(&quot;LuxGrp&quot;).style.cursor = &quot;pointer&quot;;">
+        <path
+           id="path2405"
+           style="fill:#ffdd55;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
+           d="M 58.208333,50.270833 H 15.875 a 42.333332,42.333332 0 0 0 42.333333,42.333334 z"
+           transform="matrix(2.5936486,0,0,2.5936486,-90.683215,-22.76606)"
+           inkscape:label="LuxPart" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:39.9731px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:0.914982;stroke-dasharray:none"
+           x="8.8196888"
+           y="165.10544"
+           id="LVal"
+           inkscape:label="LuxText"><tspan
+             sodipodi:role="line"
+             id="tspan324-7-5"
+             style="font-size:39.9731px;stroke-width:0.914982;stroke-dasharray:none"
+             x="8.8196869"
+             y="165.10544">Lux</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:9.80759px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#fffffe;fill-opacity:1;stroke:#000000;stroke-width:0.397158;stroke-dasharray:none"
+         x="58.068192"
+         y="5.695118"
+         id="ruimteNummer"
+         transform="scale(1.0000218,0.99997821)"
+         inkscape:label="ruimteNummer"><tspan
+           sodipodi:role="line"
+           id="tspan992"
+           style="fill:#fffffe;fill-opacity:1;stroke-width:0.397158;stroke-dasharray:none"
+           x="58.068192"
+           y="5.695118">RUIMTE</tspan></text>
+    </g>
+  </g>
+</svg>
