@@ -27,15 +27,15 @@
      inkscape:document-units="mm"
      showgrid="true"
      showguides="true"
-     inkscape:zoom="1.9999999"
-     inkscape:cx="150.75001"
-     inkscape:cy="219.00001"
+     inkscape:zoom="2"
+     inkscape:cx="207"
+     inkscape:cy="178"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
+     inkscape:current-layer="Layer1e">
     <inkscape:grid
        type="xygrid"
        id="grid3238"
@@ -50,66 +50,98 @@
   <defs
      id="defs2" />
   <g
-     inkscape:label="Laag 1"
+     inkscape:label="BG"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="LayerBG"
+     style="display:inline">
     <g
-       id="g883"
-       inkscape:label="grpRm0.00 (onzichtbaar)">
-      <rect
-         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0528746;stroke-dasharray:none"
-         id="rectRm0.00"
-         width="10.31883"
-         height="20.637501"
-         x="38.629089"
-         y="-101.6"
-         transform="rotate(90)"
-         onmouseover=""
-         onmouseout="" />
-    </g>
-    <path
        id="grpRm0.01"
-       style="fill:#cccccc;stroke:#000000;stroke-width:0.0529167;stroke-dasharray:none"
-       d="M 2.0820459,17.156578 9.0521629,45.736229 46.364098,36.636526 57.437327,74.040445 V 103.98125 H 101.99687 V 23.068362 l 23.47092,-8.948752 c 0,0 -10.28215,-2.64388 -23.13483,-5.6531483 C 89.480284,5.4571937 74.057068,4.2487587 63.774918,4.2331287 53.492772,4.2174987 38.069554,5.4962767 25.216873,8.4664617 12.364191,11.436648 2.0820459,17.156574 2.0820459,17.156574 Z"
-       sodipodi:nodetypes="ccccccccssscc"
-       onmouseover="" />
+       inkscape:label="grpRm0.01">
+      <path
+         id="rect4_1"
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0158443;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 51.851056,10.701006 -0.01379,7.583799 h -4.223007 l -1.73e-4,3.685585 h 3.44254 v 1.06315 h 0.794432 v 1.701038 h 8.473941 V 15.875 h -6.885941 v -5.173994 z"
+         sodipodi:nodetypes="ccccccccccccc"
+         inkscape:label="rect4_1-mockcolour" />
+      <path
+         id="rect4_1-nocolour"
+         style="fill:#cccccc;stroke:#000000;stroke-width:0.0529167;stroke-dasharray:none"
+         d="m 1.9497528,16.313216 6.781496,28.66595 37.3062502,-9.789583 11.1125,38.099998 10e-7,30.691669 h 44.71458 V 20.902083 L 125.14792,14.2875 c 0,0 -10.09457,-2.861377 -22.94725,-5.8706469 C 89.347994,5.4075751 73.924774,4.1991401 63.642626,4.1835101 53.36048,4.1678801 37.937262,5.4466581 25.084581,8.4168431 12.231898,11.387031 1.9497528,16.313212 1.9497528,16.313212 Z"
+         sodipodi:nodetypes="ccccccccssscc"
+         onmouseover="" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="58.737499"
+         y="28.574999"
+         id="valDisplay4_1"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938-7-3-1"
+           style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="58.737499"
+           y="28.574999">--,--</tspan></text>
+    </g>
     <g
        id="grpRm0.12"
        onmouseover="document.getElementById(&quot;rect2_5&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
-       onmouseout="document.getElementById(&quot;rect2_5&quot;).style.fill = &quot;#eee&quot;">
+       onmouseout="">
       <path
          id="rect2_5"
-         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0528063;stroke-dasharray:none"
-         d="M 63.36717,103.71667 H 101.6 V 49.212499 H 80.962499 l 0,1.5875 h -4.7625 l -0.04126,28.310426 -12.791021,-5e-6 z"
-         sodipodi:nodetypes="ccccccccc"
+         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
          onmouseover=""
-         onmouseout="" />
+         onmouseout=""
+         d="m 76.2,50.8 -10e-7,28.310416 -12.699482,10e-7 L 63.5,92.86875 H 73.81875 V 96.8375 H 76.2 l -10e-7,6.87917 H 101.6 V 70.114582 H 80.959915 L 80.959916,50.8 Z"
+         sodipodi:nodetypes="ccccccccccccc" />
+      <path
+         id="rect2_1-2-3"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0322535;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 76.993749,47.641126 v 3.142746 h 3.142745 a 3.1427451,3.1427455 0 0 0 -3.142745,-3.142746 z"
+         inkscape:label="Door" />
+      <path
+         id="rect2_1-2-76"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0405927;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 73.811892,92.889045 v 3.955311 h 3.955309 a 3.9553086,3.9553086 0 0 0 -3.955309,-3.955311 z"
+         inkscape:label="Door" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
-         x="84.383781"
-         y="92.592751"
+         x="82.714981"
+         y="86.408897"
          id="valDisplay2_5"
          inkscape:label="WaardeDisplay"><tspan
            sodipodi:role="line"
-           id="tspan938-37"
+           id="tspan938-5"
            style="font-size:5.64444px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
-           x="84.383781"
-           y="92.592751">--,--</tspan></text>
+           x="82.714981"
+           y="86.408897">--,--</tspan></text>
     </g>
     <g
        id="grpRm0.04"
        onmouseover="document.getElementById(&quot;rect2_1&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
-       onmouseout="document.getElementById(&quot;rect2_1&quot;).style.fill = &quot;#eee&quot;">
+       onmouseout="">
       <rect
          style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
          id="rect2_1"
-         width="12.435416"
-         height="19.022543"
+         width="12.435418"
+         height="18.785412"
          x="63.5"
-         y="38.65662"
+         y="38.893749"
          onmouseover=""
          onmouseout="" />
+      <path
+         id="rect2_1-2"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 63.499999,52.122916 v 5.291667 h 5.291667 a 5.2916665,5.2916665 0 0 0 -5.291667,-5.291667 z"
+         inkscape:label="Door" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
@@ -126,16 +158,21 @@
     <g
        id="grpRm0.07"
        onmouseover="document.getElementById(&quot;rect4_3&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
-       onmouseout="document.getElementById(&quot;rect4_3&quot;).style.fill = &quot;#eee&quot;">
-      <rect
-         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.054668;stroke-dasharray:none"
+       onmouseout="">
+      <path
          id="rect4_3"
-         width="12.942395"
-         height="16.668749"
-         x="63.257607"
-         y="5.556252"
+         style="fill:#eeeeee;stroke:#000000;stroke-width:0.054668"
          onmouseover=""
-         onmouseout="" />
+         onmouseout=""
+         d="m 63.235416,4.4979166 c 6.614583,0 6.879166,0 12.964583,0.5291667 V 20.6375 H 63.235416 Z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="rect2_1-2-68"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 69.585415,20.6375 h 5.291667 V 15.345833 A 5.2916665,5.2916665 0 0 0 69.585415,20.6375 Z"
+         inkscape:label="Door" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
@@ -152,14 +189,21 @@
     <g
        id="grpRm0.08"
        onmouseover="document.getElementById(&quot;rect4_4&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
-       onmouseout="document.getElementById(&quot;rect4_4&quot;).style.fill = &quot;#eee&quot;">
+       onmouseout="">
       <path
          style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0529167;stroke-dasharray:none"
-         d="M 101.07083,22.224999 123.03125,14.2875 76.464582,5.5562499 V 22.224999 Z"
+         d="m 101.6,20.6375 22.48958,-6.35 c 0,0 -29.633331,-8.7312501 -47.624998,-9.2604167 V 20.6375 Z"
          id="rect4_4"
          onmouseover=""
          onmouseout=""
          sodipodi:nodetypes="ccccc" />
+      <path
+         id="rect2_1-2-6"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="M 77.787499,15.345833 V 20.6375 h 5.291667 a 5.2916665,5.2916665 0 0 0 -5.291667,-5.291667 z"
+         inkscape:label="Door" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
@@ -177,17 +221,22 @@
        id="grpRm0.03"
        onmouseover="document.getElementById(&quot;rect4_2&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
        onmouseout="">
-      <rect
-         style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+      <path
          id="rect4_2"
-         width="24.166533"
-         height="36.90974"
-         x="-43.492764"
-         y="-36.122864"
-         transform="matrix(-0.23683815,-0.97154913,-0.97154913,0.23683815,0,0)"
+         style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+         onclick=""
          onmouseover=""
          onmouseout=""
-         onclick="" />
+         d="m -44.834788,-36.456119 29.453928,0.172854 c 1.427098,19.259971 1.427098,19.259971 -1.120564,37.8548961 l -28.81449,0.2159306 z"
+         sodipodi:nodetypes="ccccc"
+         transform="matrix(-0.23683815,-0.97154913,-0.97154913,0.23683815,0,0)" />
+      <path
+         id="rect2_1-2-9"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="M 40.972156,14.658363 39.6875,9.5249999 34.554142,10.809651 a 5.2916665,5.2916665 0 0 0 6.418014,3.848712 z"
+         inkscape:label="Door" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
@@ -204,16 +253,23 @@
     <g
        id="grpRm0.05"
        onmouseover="document.getElementById(&quot;rect2_2&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
-       onmouseout="document.getElementById(&quot;rect2_2&quot;).style.fill = &quot;#eee&quot;">
+       onmouseout="">
       <rect
          style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0534293;stroke-dasharray:none"
          id="rect2_2"
-         width="12.408578"
-         height="12.255067"
-         x="63.526714"
-         y="57.85939"
+         width="12.435296"
+         height="12.170707"
+         x="63.5"
+         y="57.943748"
          onmouseover=""
          onmouseout="" />
+      <path
+         id="rect2_1-2-7"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 63.499999,64.558332 v 5.291667 h 5.291667 a 5.2916665,5.2916665 0 0 0 -5.291667,-5.291667 z"
+         inkscape:label="Door" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
@@ -230,7 +286,7 @@
     <g
        id="grpRm0.06"
        onmouseover="document.getElementById(&quot;rect2_3&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
-       onmouseout="document.getElementById(&quot;rect2_3&quot;).style.fill = &quot;#eee&quot;">
+       onmouseout="">
       <rect
          style="fill:#eeeeee;fill-opacity:1;stroke:#000000;stroke-width:0.0534871;stroke-dasharray:none"
          id="rect2_3"
@@ -240,6 +296,13 @@
          y="70.360626"
          onmouseover=""
          onmouseout="" />
+      <path
+         id="rect2_1-2-1"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 68.791666,70.643749 h -5.291667 v 5.291668 a 5.2916665,5.2916665 0 0 0 5.291667,-5.291668 z"
+         inkscape:label="Door" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
@@ -254,20 +317,565 @@
            y="75.896362">--,--</tspan></text>
     </g>
     <g
-       id="g5668"
-       onmouseover=""
-       onmouseout=""
+       id="g825"
+       inkscape:label="grpRm0.09"
+       style="stroke-width:0.053;stroke-dasharray:none">
+      <rect
+         style="fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         id="rect822"
+         width="20.637499"
+         height="9.5249996"
+         x="80.962502"
+         y="38.893749" />
+      <path
+         id="rect2_1-2-4"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 86.254166,38.89375 h -5.291667 v 5.291666 a 5.2916665,5.2916665 0 0 0 5.291667,-5.291666 z"
+         inkscape:label="Door" />
+    </g>
+    <g
+       id="g2435"
+       inkscape:label="Trap">
+      <path
+         id="rect1536"
+         style="fill:#929292;stroke:#000000;stroke-width:0.0551919"
+         d="m 59.796925,32.571346 h 11.612977 l -1.559903,5.793237 -10.053074,-0.0276 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         d="m 61.118749,32.54375 v 5.820833 z"
+         id="path1592" />
+      <path
+         style="fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         d="m 62.441666,32.54375 v 5.820833 z"
+         id="path1592-1" />
+      <path
+         style="fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         d="m 63.764583,32.54375 v 5.820833 z"
+         id="path1592-6" />
+      <path
+         id="rect2446"
+         style="fill:#929292;stroke:#000000;stroke-width:0.053"
+         d="m 67.468751,34.660416 1.587498,0.79375 v 0 l -1.587498,0.79375 -10e-7,-10e-7 z m -3.704168,0.79375 h 3.704166 z"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:label="Pijl" />
+    </g>
+    <g
+       id="g1438"
+       inkscape:label="ingang">
+      <path
+         id="rect2_1-2-6-4"
+         style="fill:#929292;fill-opacity:0;stroke:#000000;stroke-width:0.0456032;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 101.57284,25.427153 v 5.291667 h 3.73133 a 3.7313229,5.2916665 0 0 0 -3.73133,-5.291667 z"
+         inkscape:label="Door" />
+      <path
+         id="rect2_1-2-6-4-4"
+         style="fill:#929292;fill-opacity:0;stroke:#000000;stroke-width:0.0456032;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 105.30417,30.71882 h -3.73133 v 5.29167 a 3.7313229,5.2916665 0 0 0 3.73133,-5.29167 z"
+         inkscape:label="Door" />
+      <rect
+         style="fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.0552277;stroke-dasharray:none"
+         id="rect1435"
+         width="8.729022"
+         height="14.655647"
+         x="92.869865"
+         y="23.416739"
+         ry="0" />
+    </g>
+    <g
+       id="g3328"
+       inkscape:label="grpRm0.13">
+      <path
+         id="rect3320"
+         style="fill:#929292;stroke:#000000;stroke-width:0.053"
+         d="m 63.5,97.102081 h 12.435416 v 6.614589 H 63.499999 Z"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <g
+       id="grpRm0.11"
+       inkscape:label="grpRm0.11"
+       onmouseover="document.getElementById(&quot;rect2_4&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="">
+      <path
+         id="rect2_4"
+         style="fill:#eeeeee;stroke:#000000;stroke-width:0.0531953"
+         d="m 81.227083,50.858502 20.346317,-0.05846 v 18.991497 l -20.346317,0.05846 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         id="rect2_1-2-4-8"
+         style="fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0542396;stroke-dasharray:none"
+         onmouseover=""
+         onmouseout=""
+         d="m 81.227083,62.970832 v 5.291667 h 5.291666 a 5.2916665,5.2916665 0 0 0 -5.291666,-5.291667 z"
+         inkscape:label="Door" />
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+         x="91.400246"
+         y="60.925846"
+         id="valDisplay2_4"
+         inkscape:label="WaardeDisplay"><tspan
+           sodipodi:role="line"
+           id="tspan938-7-3"
+           style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+           x="91.400246"
+           y="60.925846">--,--</tspan></text>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="Layer1e"
+     inkscape:label="1e"
+     style="display:inline">
+    <path
+       id="path1025"
+       style="display:inline;fill:#cccccc;stroke:#000000;stroke-width:0.0529167;stroke-dasharray:none"
+       inkscape:label="outline"
+       d="m 63.642621,4.4483018 c -10.28213,-0.0156 -25.70519,1.263156 -38.55785,4.233333 C 11.90625,11.1125 -1.5875,18.25625 -1.5875,18.25625 L 8.7312499,44.979166 C 22.707598,41.199201 33.3375,38.89375 33.3375,38.89375 h 29.897916 c 0,0 0,65.0875 -8e-6,65.0875 H 101.86458 V 39.687495 H 88.106241 c 2e-5,-5.497459 8e-6,-15.610412 8e-6,-15.610412 l 37.041661,-9.789588 c 0,0 -10.09477,-2.596593 -22.94744,-5.6058602 C 89.347801,5.6723678 73.924761,4.4639318 63.642621,4.4483018 Z"
+       sodipodi:nodetypes="ccccccccccccsc" />
+    <g
+       id="g7455"
+       inkscape:label="ruimtes kubus">
+      <g
+         id="grpRm1.11"
+         inkscape:label="grpRm1.11"
+         onmouseover="document.getElementById(&quot;rect3_2&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect3_2"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.0533678"
+           d="m 63.499999,58.737499 h 11.641667 v 12.435417 l -11.641667,3e-6 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="rect2_1-2-6-6-9"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m 71.702095,69.849987 h 3.439583 v -3.439583 c -1.89666,0 -3.439607,1.542923 -3.439607,3.439583 z"
+           inkscape:label="Door"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="path7153-3"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m 75.141666,66.410392 v -3.439583 h -3.439583 c 0,1.888496 1.551087,3.439583 3.439583,3.439583 z"
+           inkscape:label="Door"
+           sodipodi:nodetypes="cccc" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="69.320831"
+           y="65.293175"
+           id="valDisplay3_2"
+           inkscape:label="WaardeDisplay"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2-5"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="69.320831"
+             y="65.293175">--,--</tspan></text>
+      </g>
+      <g
+         id="g7119"
+         inkscape:label="grpRm1.08">
+        <path
+           id="rect6883"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+           d="m 63.499999,54.239583 h 11.641667 l 10e-7,4.233333 -11.641667,1e-6 z"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+      <g
+         id="grpRm1.12"
+         inkscape:label="grpRm1.12"
+         onmouseover="document.getElementById(&quot;rect3_3&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect3_3"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+           d="M 83.079166,54.768749 H 101.6 v 18.520832 l -18.520834,10e-7 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="rect2_1-2-6-0"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m 83.079164,65.881246 v 5.29167 h 5.29167 a 5.2916665,5.2916665 0 0 0 -5.29167,-5.29167 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="92.339584"
+           y="64.367126"
+           id="valDisplay3_3"
+           inkscape:label="WaardeDisplay"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2-3"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="92.339584"
+             y="64.367126">--,--</tspan></text>
+      </g>
+      <g
+         id="grpRm1.07"
+         inkscape:label="grpRm1.07"
+         onmouseover="document.getElementById(&quot;rect3_1&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect3_1"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           d="M 83.079166,39.952083 101.6,39.952084 V 54.504166 H 83.079166 Z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="rect2_1-2-6-0-2"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m 88.370836,41.274999 h -5.29167 v 5.29167 a 5.2916665,5.2916665 0 0 0 5.29167,-5.29167 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="92.339584"
+           y="48.58889"
+           id="valDisplay3_1"
+           inkscape:label="WaardeDisplay"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="92.339584"
+             y="48.58889">--,--</tspan></text>
+      </g>
+      <g
+         id="grpRm1.13"
+         inkscape:label="grpRm1.13"
+         onmouseover="document.getElementById(&quot;rect3_4&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect3_4"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           d="M 75.40625,54.76875 V 71.4375 l -11.906251,-10e-7 v 25.4 c 4.233278,0.0036 8.466727,0.0018 12.7,0 v 6.879171 l 25.400001,-5e-5 c -3.2e-4,-23.229651 -5e-4,-0.53312 -5.2e-4,-30.161937 L 82.814583,73.554167 V 54.76875 Z"
+           sodipodi:nodetypes="ccccccccccc" />
+        <path
+           id="rect2_1-2-6-6"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m 79.115792,54.768749 h 3.434207 v -3.434207 a 3.4342076,3.4342076 0 0 0 -3.434207,3.434207 z"
+           inkscape:label="Door" />
+        <path
+           id="path7153"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m 75.670832,51.349325 v 3.419424 h 3.419424 a 3.4194243,3.4194243 0 0 0 -3.419424,-3.419424 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="82.550003"
+           y="85.724998"
+           id="valDisplay3_4"
+           inkscape:label="WaardeDisplay"><tspan
+             sodipodi:role="line"
+             id="tspan938-80"
+             style="font-size:5.64444px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="82.550003"
+             y="85.724998">--,--</tspan></text>
+      </g>
+      <g
+         id="g7107"
+         inkscape:label="grpRm1.14">
+        <path
+           id="rect3320-5"
+           style="display:inline;fill:#929292;stroke:#000000;stroke-width:0.053"
+           d="m 63.5,97.102069 h 12.435416 v 6.614601 H 63.499999 Z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="path7153-3-4"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m 74.612499,100.54167 v -3.439589 h -3.439583 c 0,1.888496 1.551087,3.439589 3.439583,3.439589 z"
+           inkscape:label="Door"
+           sodipodi:nodetypes="cccc" />
+      </g>
+      <g
+         id="g7498"
+         inkscape:label="wc's"
+         style="display:inline">
+        <rect
+           style="display:inline;fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           id="rect7433"
+           width="11.641664"
+           height="15.081249"
+           x="63.5"
+           y="38.893749"
+           inkscape:label="wc's" />
+      </g>
+    </g>
+    <g
+       id="g6738"
+       inkscape:label="ruimtes banaan"
+       transform="rotate(-14.7,26.359974,32.628286)"
+       style="display:inline">
+      <g
+         id="g6604"
+         inkscape:label="gang"
+         transform="translate(142.875,-39.6875)">
+        <path
+           id="rect5100"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+           d="m -58.472916,75.406249 v 3.96875 H -122.2375 v -3.96875 z"
+           sodipodi:nodetypes="ccccc" />
+      </g>
+      <g
+         id="grpRm1.01"
+         inkscape:label="grpRm1.01"
+         style="display:inline"
+         transform="translate(142.875,-39.6875)"
+         onmouseover="document.getElementById(&quot;rect5_1&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect5_1"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+           d="m -53.893226,61.30323 c 17.75505,7.393318 17.75505,7.393318 36.563018,18.071769 h -40.878125 l 2e-6,-3.96875 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="rect2_1-2-1-7-3"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m -58.218959,75.686706 v 3.169754 h 3.169753 a 3.169752,3.169752 0 0 0 -3.169753,-3.169754 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="-23.872997"
+           y="82.599098"
+           id="valDisplay5_1"
+           inkscape:label="WaardeDisplay"
+           transform="rotate(14.7)"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2-5-3-9-4-0"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="-23.872997"
+             y="82.599098">--,--</tspan></text>
+      </g>
+      <g
+         id="grpRm1.02"
+         style="display:inline"
+         transform="translate(142.875,-39.6875)"
+         onmouseover="document.getElementById(&quot;rect5_2&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect5_2"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           d="m -79.917586,53.108183 c 13.307992,3.491286 14.075761,3.692707 25.835578,7.871984 l -4.390908,14.161499 h -21.43125 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="rect2_1-2-1-7-6"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m -63.764586,75.141666 h 5.29167 v -5.291668 a 5.2916665,5.2916665 0 0 0 -5.29167,5.291668 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="-50.334717"
+           y="82.644882"
+           id="valDisplay5_2"
+           inkscape:label="WaardeDisplay"
+           transform="rotate(14.7)"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2-5-3-9-4-6"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="-50.334717"
+             y="82.644882">--,--</tspan></text>
+      </g>
+      <g
+         id="grpRm1.03"
+         style="display:inline"
+         transform="translate(142.875,-39.6875)"
+         onmouseover="document.getElementById(&quot;rect5_3&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect5_3"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+           d="m -99.904849,50.052917 19.73134,2.988126 0.0048,22.100623 h -19.579166 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="rect2_1-2-1-7-5"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m -86.254169,75.141666 h 5.29167 v -5.291668 a 5.2916665,5.2916665 0 0 0 -5.29167,5.291668 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="-71.205757"
+           y="85.161476"
+           id="valDisplay5_3"
+           inkscape:label="WaardeDisplay"
+           transform="rotate(14.7)"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2-5-3-9-4-5"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="-71.205757"
+             y="85.161476">--,--</tspan></text>
+      </g>
+      <g
+         id="grpRm1.05"
+         transform="translate(142.875,-39.6875)"
+         onmouseover="document.getElementById(&quot;rect5_5&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout=""
+         inkscape:label="grpRm1.05">
+        <path
+           id="rect5_5"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+           d="m -123.76887,49.263045 13.41305,-0.03713 0.0246,25.915753 h -11.90625 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="rect2_1-2-1-7-2"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m -116.41667,75.141666 h 5.29167 v -5.29167 a 5.2916665,5.2916665 0 0 0 -5.29167,5.29167 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="-97.43515"
+           y="89.997314"
+           id="valDisplay5_5"
+           inkscape:label="WaardeDisplay"
+           transform="rotate(14.7)"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2-5-3-9"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="-97.43515"
+             y="89.997314">--,--</tspan></text>
+      </g>
+      <g
+         id="grpRm1.04"
+         style="display:inline"
+         transform="translate(142.875,-39.6875)"
+         onmouseover="document.getElementById(&quot;rect5_4&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect5_4"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+           d="m -110.0999,49.293053 9.93913,0.692724 0.14827,25.155889 h -10.05417 z"
+           sodipodi:nodetypes="ccccc" />
+        <path
+           id="rect2_1-2-1-7-9"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.0543075;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m -106.09792,75.141668 h 5.29167 v -5.29167 a 5.2916665,5.2916665 0 0 0 -5.29167,5.29167 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="-85.829514"
+           y="87.528145"
+           id="valDisplay5_4"
+           inkscape:label="WaardeDisplay"
+           transform="rotate(14.7)"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2-5-3-9-4"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="-85.829514"
+             y="87.528145">--,--</tspan></text>
+      </g>
+      <g
+         id="grpRm1.06"
+         inkscape:label="grpRm1.06"
+         transform="translate(142.875,-39.6875)"
+         onmouseover="document.getElementById(&quot;rect5_6&quot;).style.fill = &quot;#0000ff&quot;, style.cursor = &quot;pointer&quot;;"
+         onmouseout="">
+        <path
+           id="rect5_6"
+           style="fill:#eeeeee;stroke:#000000;stroke-width:0.053"
+           d="m -139.38885,51.456565 3.0782,27.887694 13.80857,0.03074 v -3.96875 l -1.52271,-26.210344 z"
+           sodipodi:nodetypes="cccccc" />
+        <path
+           id="rect2_1-2-1-7"
+           style="display:inline;fill:#eeeeee;fill-opacity:0;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+           onmouseover=""
+           onmouseout=""
+           d="m -125.67708,78.845832 h 3.175 V 75.67083 a 3.1749997,3.1749997 0 0 0 -3.175,3.175002 z"
+           inkscape:label="Door" />
+        <text
+           xml:space="preserve"
+           style="font-weight:bold;font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none"
+           x="-110.06032"
+           y="95.533379"
+           id="valDisplay5_6"
+           inkscape:label="WaardeDisplay"
+           transform="rotate(14.7)"><tspan
+             sodipodi:role="line"
+             id="tspan938-8-2-5-3"
+             style="font-size:3.175px;fill:#ffffff;fill-opacity:1;stroke-width:0.1;stroke-dasharray:none"
+             x="-110.06032"
+             y="95.533379">--,--</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g6750"
+       inkscape:label="Trap"
+       style="display:inline">
+      <path
+         id="path6740"
+         style="fill:#929292;stroke:#000000;stroke-width:0.0551919"
+         d="m 59.796925,32.571346 h 11.612977 l -1.559903,5.793237 -10.053074,-0.0276 z"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         style="fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         d="m 61.118749,32.54375 v 5.820833 z"
+         id="path6742" />
+      <path
+         style="fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         d="m 62.441666,32.54375 v 5.820833 z"
+         id="path6744" />
+      <path
+         style="fill:#929292;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         d="m 63.764583,32.54375 v 5.820833 z"
+         id="path6746" />
+      <path
+         id="path6748"
+         style="fill:#929292;stroke:#000000;stroke-width:0.053"
+         d="m 67.468751,34.660416 1.587498,0.79375 v 0 l -1.587498,0.79375 -10e-7,-10e-7 z m -3.704168,0.79375 h 3.704166 z"
+         sodipodi:nodetypes="ccccccccc"
+         inkscape:label="Pijl" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="control"
+     style="display:inline">
+    <g
+       id="select1e"
+       onmouseover="document.getElementById(&quot;rect1e&quot;).style.fill = &quot;#eee&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="document.getElementById(&quot;rect1e&quot;).style.fill=&quot;#b4113d&quot;"
        inkscape:label="Verdieping 1">
       <rect
-         style="fill:#b4113d;fill-opacity:1;stroke:#000000;stroke-width:0.0418072"
-         id="rect320-7"
+         style="fill:#b4113d;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         id="rect1e"
          width="17.47361"
          height="7.9221554"
          x="4.7513905"
          y="85.724998"
          ry="0.052861191"
-         onmouseover="style.fill = &quot;#eee&quot;, style.cursor = &quot;pointer&quot;;"
-         onmouseout="style.fill=&quot;#b4113d&quot;" />
+         onmouseover=""
+         onmouseout="" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:2.82222px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:0.0529167"
@@ -286,18 +894,20 @@
            id="tspan3912">Verdieping</tspan></text>
     </g>
     <g
-       id="g5674"
-       inkscape:label="Verdieping 0">
+       id="selectBG"
+       inkscape:label="Verdieping 0"
+       onmouseover="document.getElementById(&quot;rectBG&quot;).style.fill = &quot;#eee&quot;, style.cursor = &quot;pointer&quot;;"
+       onmouseout="document.getElementById(&quot;rectBG&quot;).style.fill=&quot;#b4113d&quot;">
       <rect
-         style="fill:#b4113d;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-dasharray:none"
-         id="rect320"
+         style="fill:#b4113d;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
+         id="rectBG"
          width="17.47361"
          height="7.9221554"
          x="4.7569451"
          y="95.270905"
          ry="0.052861191"
-         onmouseover="style.fill = &quot;#eee&quot;, style.cursor = &quot;pointer&quot;;"
-         onmouseout="style.fill=&quot;#b4113d&quot;" />
+         onmouseover=""
+         onmouseout="" />
       <text
          xml:space="preserve"
          style="font-weight:bold;font-size:2.82222px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:0.0529167"
