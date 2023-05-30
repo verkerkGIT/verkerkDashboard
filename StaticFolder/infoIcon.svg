@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="21.695356mm"
-   height="25.695999mm"
-   viewBox="0 0 21.695356 25.696"
+   width="23.695mm"
+   height="26.695999mm"
+   viewBox="0 0 23.694999 26.696"
    version="1.1"
    id="svgIcon"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
@@ -25,21 +25,21 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="5.9651515"
-     inkscape:cx="17.183134"
-     inkscape:cy="54.231649"
+     inkscape:cx="35.20447"
+     inkscape:cy="48.615697"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-height="1017"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="HumGrp" />
+     inkscape:current-layer="infoIconGrp" />
   <defs
      id="defs1998" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="infoIconLayer"
-     transform="translate(-3.178892e-7,1.108871)">
+     transform="translate(0.9998215,1.9981119)">
     <g
        id="infoIconGrp"
        inkscape:label="infoIcon"
@@ -53,11 +53,11 @@
          inkscape:label="Temp"
          onmouseover="document.getElementById(&quot;TempGrp&quot;).style.cursor = &quot;pointer&quot;;">
         <path
-           id="path11933"
+           id="TempIcon"
            style="fill:#ff5555;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
            d="M 58.208333,7.9375 A 42.333332,42.333332 0 0 0 15.875,50.270833 h 42.333333 z"
            transform="matrix(5.8517641,0,0,5.8517641,-238.14128,-135.1568)"
-           inkscape:label="TempPart" />
+           inkscape:label="TempIcon" />
         <text
            xml:space="preserve"
            style="font-weight:bold;font-size:90.187px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:2.06437;stroke-dasharray:none"
@@ -70,6 +70,11 @@
              style="font-size:90.187px;stroke-width:2.06437;stroke-dasharray:none"
              x="-11.970443"
              y="92.511093">°C</tspan></text>
+        <path
+           id="TempIcon_outline"
+           style="fill:#929292;fill-opacity:0;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+           inkscape:label="TempIcon_outline"
+           d="M 124.22395,-134.07333 A 313.95364,313.93997 0 0 0 -189.74021,179.86329 H 124.22395 Z" />
       </g>
       <g
          id="HumGrp"
@@ -84,7 +89,7 @@
            style="fill:#57ffff;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
            d="M 58.208333,7.9375 V 50.270833 H 100.54167 A 42.333332,42.333332 0 0 0 58.208333,7.9375 Z"
            transform="translate(-42.856686,58.863299)"
-           inkscape:label="HumPart" />
+           inkscape:label="HumIcon" />
         <text
            xml:space="preserve"
            style="font-weight:bold;font-size:15.4119px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:0.352778;stroke-dasharray:none"
@@ -97,6 +102,11 @@
              style="font-size:15.4119px;stroke-width:0.352778;stroke-dasharray:none"
              x="34.720093"
              y="97.754105">RV</tspan></text>
+        <path
+           id="HumIcon_outline"
+           style="fill:#929292;fill-opacity:0;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+           inkscape:label="HumIcon_outline"
+           d="M 12.033201,59.048452 V 112.69665 H 65.683754 A 53.651111,53.648775 0 0 0 12.033201,59.048452 Z" />
       </g>
       <g
          id="CO2Grp"
@@ -105,23 +115,28 @@
          inkscape:label="CO2"
          onmouseover="document.getElementById(&quot;CO2Grp&quot;).style.cursor = &quot;pointer&quot;;">
         <path
-           id="path11919"
+           id="CO2Icon"
            style="fill:#57ff57;fill-opacity:1;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
            d="M 100.54167,50.270833 H 58.208333 V 92.604167 A 42.333332,42.333332 0 0 0 100.54167,50.270833 Z"
            transform="matrix(0.70612419,0,0,0.70612419,42.64034,48.267718)"
-           inkscape:label="CO2Part" />
+           inkscape:label="CO2Icon" />
         <text
            xml:space="preserve"
-           style="font-weight:bold;font-size:9.89339546px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:0.169876;stroke-dasharray:none"
+           style="font-weight:bold;font-size:9.8934px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:0.169876;stroke-dasharray:none"
            x="97.416763"
            y="99.237953"
            id="CVal"
            inkscape:label="CO2Text"><tspan
              sodipodi:role="line"
              id="tspan324-7-6"
-             style="stroke-width:0.169876;stroke-dasharray:none;font-size:9.89339546px"
+             style="font-size:9.8934px;stroke-width:0.169876;stroke-dasharray:none"
              x="97.416763"
              y="99.237953">CO2</tspan></text>
+        <path
+           id="CO2Icon_outline"
+           style="fill:#929292;fill-opacity:0;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+           inkscape:label="CO2Icon_outline"
+           d="M 119.28337,81.314049 H 81.399416 V 119.19635 A 37.884346,37.882696 0 0 0 119.28337,81.314049 Z" />
       </g>
       <g
          id="LuxGrp"
@@ -129,11 +144,11 @@
          inkscape:label="Lux"
          onmouseover="document.getElementById(&quot;LuxGrp&quot;).style.cursor = &quot;pointer&quot;;">
         <path
-           id="path2405"
+           id="LuxIcon"
            style="fill:#ffdd55;stroke:#000000;stroke-width:1.5;stroke-dasharray:none"
            d="M 58.208333,50.270833 H 15.875 a 42.333332,42.333332 0 0 0 42.333333,42.333334 z"
            transform="matrix(2.5936486,0,0,2.5936486,-90.683215,-22.76606)"
-           inkscape:label="LuxPart" />
+           inkscape:label="LuxIcon" />
         <text
            xml:space="preserve"
            style="font-weight:bold;font-size:39.9731px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';text-align:center;text-anchor:middle;fill:#579dff;stroke:#000000;stroke-width:0.914982;stroke-dasharray:none"
@@ -146,6 +161,11 @@
              style="font-size:39.9731px;stroke-width:0.914982;stroke-dasharray:none"
              x="8.8196869"
              y="165.10544">Lux</tspan></text>
+        <path
+           id="LuxIcon_outline"
+           style="fill:#929292;fill-opacity:0;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+           inkscape:label="LuxIcon_outline"
+           d="M 69.926143,98.615665 H -69.230646 A 139.15213,139.14607 0 0 0 69.926143,237.76027 Z" />
       </g>
       <text
          xml:space="preserve"
