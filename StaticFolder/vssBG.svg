@@ -26,15 +26,15 @@
      inkscape:document-units="mm"
      showgrid="true"
      showguides="false"
-     inkscape:zoom="1.4142135"
-     inkscape:cx="159.80614"
-     inkscape:cy="263.75084"
+     inkscape:zoom="2.828427"
+     inkscape:cx="154.14929"
+     inkscape:cy="267.28638"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="controlLayer"><inkscape:grid
+     inkscape:current-layer="expandedControlIcon"><inkscape:grid
        type="xygrid"
        id="grid1084" /></sodipodi:namedview><defs
      id="defs2" /><g
@@ -790,13 +790,14 @@
              x="11.86864"
              y="96.687607"
              id="tspan4889">grond</tspan></text></g><g
-         id="g1078"
+         id="selectLoop"
          inkscape:label="Cycle"
-         onmouseover="document.getElementById(&quot;rectBG&quot;).style.fill = &quot;#eee&quot;, style.cursor = &quot;pointer&quot;;"
-         onmouseout="document.getElementById(&quot;rectBG&quot;).style.fill=&quot;#b4113d&quot;"
-         transform="translate(21.72009,6.5484797)"><rect
+         onmouseover="document.getElementById(&quot;selectLoop&quot;).style.cursor = &quot;pointer&quot;;"
+         onmouseout=""
+         transform="translate(21.72009,6.5484797)"
+         onclick=""><rect
            style="fill:#b4113d;fill-opacity:1;stroke:#000000;stroke-width:0.053;stroke-dasharray:none"
-           id="rect1070"
+           id="rectLoop"
            width="17.489204"
            height="3.9425001"
            x="3.124038"
@@ -813,7 +814,7 @@
              style="font-size:2.11667px;fill:#333333;fill-opacity:1;stroke-width:0.0529167"
              x="11.944088"
              y="96.549934"
-             id="tspan1074">Loop</tspan></text></g></g><g
+             id="tspan1074">Automatisch</tspan></text></g></g><g
        id="miniatureControlIcon"
        inkscape:label="Icon"
        style="display:inline"
