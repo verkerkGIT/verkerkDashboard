@@ -1724,13 +1724,13 @@
         "type": "file",
         "z": "e7a7e61768dadc02",
         "name": "",
-        "filename": "C:\\Users\\gustav.lassche\\.node-red\\projects\\Verkerk_EnergieDashboard\\NominalVals.json",
-        "filenameType": "str",
+        "filename": "filePath",
+        "filenameType": "msg",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "true",
         "encoding": "none",
-        "x": 1050,
+        "x": 800,
         "y": 400,
         "wires": [
             [
@@ -1889,7 +1889,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Set new value",
-        "func": "var nominalVal = global.get(\"nominalVal\");\nvar maxVal = global.get(\"maxVal\");\nvar index = global.get(\"arrayIndex\");\nvar latestEmail = global.get(\"latestEmail\");\nif(msg.topic == \"nominalVal\")\n{\n    msg.payload.data[index].Nom = nominalVal;\n}\nif(msg.topic == \"maxVal\")\n{\n    msg.payload.data[index].Max = maxVal;\n}\nif(msg.topic == \"latestEmail\")\n{\n    msg.payload.data[index].Email = latestEmail;\n}\nglobal.set(\"latestJSON\", msg.payload);\nreturn msg;",
+        "func": "var nominalVal = global.get(\"nominalVal\");\nvar maxVal = global.get(\"maxVal\");\nvar index = global.get(\"arrayIndex\");\nvar latestEmail = global.get(\"latestEmail\");\nmsg.filePath = global.get(\"defaultFolder\") + \"/NominalVals.json\";\nif(msg.topic == \"nominalVal\")\n{\n    msg.payload.data[index].Nom = nominalVal;\n}\nif(msg.topic == \"maxVal\")\n{\n    msg.payload.data[index].Max = maxVal;\n}\nif(msg.topic == \"latestEmail\")\n{\n    msg.payload.data[index].Email = latestEmail;\n}\nglobal.set(\"latestJSON\", msg.payload);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2384,7 +2384,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Save history data",
-        "func": "const d = new Date();\nyear = d.getFullYear().toString();\nmonth = (d.getMonth() + 1).toString().padStart(2, '0');\nday = d.getDate().toString().padStart(2, '0');\nhour = d.getHours();\nminute = d.getMinutes();\nsecond = d.getSeconds();\n\nmsg.topic = \"/Users/gustav.lassche/energylogs/\" + (day + \"-\" + month + \"-\" + year) + \".log\";\n\nif(hour == 0 && minute == 0 && second < 60)\n{\n    global.set(\"historySave\", {});\n    global.set(\"counter\", 0);\n    global.set(\"totalEnergy\", 0);\n}\n\nloadedData = global.get(\"loadedData\");\nif(typeof(loadedData) == \"undefined\")\n{\n    loadedData = [];\n}\nfor(i = 0; i < loadedData.length; i++)\n{\n    if(loadedData[i].filePath == msg.topic)\n    {\n        loadedData.splice(i, 1);\n    }\n}\nloadedData.push({filePath : msg.topic, data : msg.payload})\nglobal.set(\"loadedData\", loadedData);\nreturn msg;",
+        "func": "const d = new Date();\nyear = d.getFullYear().toString();\nmonth = (d.getMonth() + 1).toString().padStart(2, '0');\nday = d.getDate().toString().padStart(2, '0');\nhour = d.getHours();\nminute = d.getMinutes();\nsecond = d.getSeconds();\nmsg.topic = global.get(\"defaultFolder\") + \"/energylogs/\" + (day + \"-\" + month + \"-\" + year) + \".log\";\n\nif(hour == 0 && minute == 0 && second < 60)\n{\n    global.set(\"historySave\", {});\n    global.set(\"counter\", 0);\n    global.set(\"totalEnergy\", 0);\n}\n\nloadedData = global.get(\"loadedData\");\nif(typeof(loadedData) == \"undefined\")\n{\n    loadedData = [];\n}\nfor(i = 0; i < loadedData.length; i++)\n{\n    if(loadedData[i].filePath == msg.topic)\n    {\n        loadedData.splice(i, 1);\n    }\n}\nloadedData.push({filePath : msg.topic, data : msg.payload})\nglobal.set(\"loadedData\", loadedData);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2614,7 +2614,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "date to file",
-        "func": "var d = new Date(msg.payload);\nyear = d.getFullYear().toString();\nmonth = (d.getMonth() + 1).toString().padStart(2, '0');\nday = d.getDate().toString().padStart(2, '0');\nhour = d.getHours();\nminute = d.getMinutes();\nsecond = d.getSeconds();\nglobal.set(\"loadedData\", []);\nmsg.topic = \"/Users/gustav.lassche/energylogs/\" + (day + \"-\" + month + \"-\" + year) + \".log\";\nreturn msg;",
+        "func": "var d = new Date(msg.payload);\nyear = d.getFullYear().toString();\nmonth = (d.getMonth() + 1).toString().padStart(2, '0');\nday = d.getDate().toString().padStart(2, '0');\nhour = d.getHours();\nminute = d.getMinutes();\nsecond = d.getSeconds();\nglobal.set(\"loadedData\", []);\n\nmsg.topic = global.get(\"defaultFolder\") + \"/energylogs/\" + (day + \"-\" + month + \"-\" + year) + \".log\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2684,7 +2684,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "function 2",
-        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.get(\"totalEnergy\");\n//msg.payload = global.set(\"loadedData\", []);\n//msg.payload = global.get(\"koffieCounter\");\nmsg.payload = global.get(\"knxCheckList\");\nreturn msg;",
+        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.get(\"totalEnergy\");\n//msg.payload = global.set(\"loadedData\", []);\n//msg.payload = global.get(\"koffieCounter\");\nmsg.payload = global.get(\"defaultFolder\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4863,6 +4863,118 @@
                 "23dcecde21618d86",
                 "abd0dfe3eb186f82",
                 "d7a12d9eaf16e3d6"
+            ]
+        ]
+    },
+    {
+        "id": "c1e73616dd2e3b3f",
+        "type": "inject",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "2a34dade4c2b6efc"
+            ]
+        ]
+    },
+    {
+        "id": "2a34dade4c2b6efc",
+        "type": "file",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "filename": "/test.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 280,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cbc198bc826aa43f",
+        "type": "file in",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "filename": "C:\\Users\\gustav.lassche\\.node-red\\projects\\Verkerk_EnergieDashboard\\defaultFolders.config",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "4b0286603b8e6962"
+            ]
+        ]
+    },
+    {
+        "id": "4b0286603b8e6962",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "set default folder",
+        "func": "global.set(\"defaultFolder\", msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1f27b5d5ecd5b6e",
+        "type": "inject",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 70,
+        "y": 140,
+        "wires": [
+            [
+                "cbc198bc826aa43f"
             ]
         ]
     },
