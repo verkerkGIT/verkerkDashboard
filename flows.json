@@ -4867,52 +4867,6 @@
         ]
     },
     {
-        "id": "c1e73616dd2e3b3f",
-        "type": "inject",
-        "z": "e7a7e61768dadc02",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 140,
-        "y": 260,
-        "wires": [
-            [
-                "2a34dade4c2b6efc"
-            ]
-        ]
-    },
-    {
-        "id": "2a34dade4c2b6efc",
-        "type": "file",
-        "z": "e7a7e61768dadc02",
-        "name": "",
-        "filename": "/test.txt",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 280,
-        "y": 260,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "cbc198bc826aa43f",
         "type": "file in",
         "z": "e7a7e61768dadc02",
