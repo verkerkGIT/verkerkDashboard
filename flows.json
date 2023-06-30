@@ -1853,8 +1853,8 @@
         "type": "file in",
         "z": "e7a7e61768dadc02",
         "name": "Read File",
-        "filename": "C:\\Users\\gustav.lassche\\.node-red\\projects\\Verkerk_EnergieDashboard\\NominalVals.json",
-        "filenameType": "str",
+        "filename": "topic",
+        "filenameType": "msg",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
@@ -1948,7 +1948,7 @@
         "y": 360,
         "wires": [
             [
-                "7b3a2ab62cb20b3d"
+                "8d15bad4c169da1c"
             ]
         ]
     },
@@ -2764,7 +2764,7 @@
         "y": 440,
         "wires": [
             [
-                "7b3a2ab62cb20b3d"
+                "8d15bad4c169da1c"
             ]
         ]
     },
@@ -2777,7 +2777,7 @@
         "y": 400,
         "wires": [
             [
-                "7b3a2ab62cb20b3d"
+                "8d15bad4c169da1c"
             ]
         ]
     },
@@ -2790,7 +2790,7 @@
         "y": 320,
         "wires": [
             [
-                "7b3a2ab62cb20b3d"
+                "8d15bad4c169da1c"
             ]
         ]
     },
@@ -4975,6 +4975,25 @@
         "wires": [
             [
                 "cbc198bc826aa43f"
+            ]
+        ]
+    },
+    {
+        "id": "8d15bad4c169da1c",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "set defaultFolder",
+        "func": "msg.topic = global.get(\"defaultFolder\") + \"/NominalVals.json\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [
+                "7b3a2ab62cb20b3d"
             ]
         ]
     },
