@@ -4871,14 +4871,14 @@
         "type": "file in",
         "z": "e7a7e61768dadc02",
         "name": "",
-        "filename": "C:\\Users\\gustav.lassche\\.node-red\\projects\\Verkerk_EnergieDashboard\\defaultFolders.config",
+        "filename": "defaultFolders.config",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 480,
+        "x": 260,
         "y": 140,
         "wires": [
             [
@@ -4897,7 +4897,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
+        "x": 470,
         "y": 140,
         "wires": [
             []
