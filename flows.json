@@ -1908,7 +1908,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Fill dropdown",
-        "func": "var file = global.get(\"latestJSON\").data;\nmsg.options = new Array(100);\n\nglobal.set(\"Kastnaam\", msg.payload);\nfor(i = 0; i < file.length; i++)\n{\n    if(file[i].KastNaam == msg.payload)\n    {\n        msg.options[i] = file[i].Naam;  \n    }\n}\nreturn msg;",
+        "func": "var file = global.get(\"latestJSON\").data;\nmsg.options = new Array(100);\n\nglobal.set(\"arrayIndex\", 0);\nglobal.set(\"KastNaam\", msg.payload);\nfor(i = 0; i < file.length; i++)\n{\n    if(file[i].KastNaam == msg.payload)\n    {\n        msg.options[i] = file[i].Naam;  \n    }\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1940,7 +1940,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "5",
         "topic": "",
         "payload": "",
         "payloadType": "date",
@@ -2684,7 +2684,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "function 2",
-        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.get(\"totalEnergy\");\n//msg.payload = global.set(\"loadedData\", []);\n//msg.payload = global.get(\"koffieCounter\");\nmsg.payload = global.get(\"defaultFolder\");\nreturn msg;",
+        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.get(\"totalEnergy\");\n//msg.payload = global.set(\"loadedData\", []);\n//msg.payload = global.get(\"koffieCounter\");\n//msg.payload = global.get(\"KastNaam\");\nmsg.payload = global.get(\"latestJSON\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4878,7 +4878,7 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 460,
+        "x": 480,
         "y": 140,
         "wires": [
             [
@@ -4897,7 +4897,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 890,
+        "x": 910,
         "y": 140,
         "wires": [
             []
@@ -4920,7 +4920,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "1",
         "topic": "",
         "payload": "",
         "payloadType": "date",
