@@ -1319,7 +1319,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "MainProcess",
-        "func": "var file = global.get(\"latestJSON\").data;\nvar arrayIndex = global.get(\"arrayIndex\");\nfunction ProcessValues(index)\n{\n\nif(global.get('showPower'))\n{\n    showPower = true;\n    msg.label = \"W\"\n}\nelse\n{\n    showPower = false;\n    msg.label = \"mA\";\n}\n\nvar dataInput = msg.payload;\nresult =\n[\n    Math.round(dataInput[index] * (!showPower ? 10 : global.get(\"L1_voltage\") / 100)),\n    Math.round(dataInput[index + 1] * (!showPower ? 10 : global.get(\"L2_voltage\") / 100)),\n    Math.round(dataInput[index + 2] * (!showPower ? 10 : global.get(\"L3_voltage\")/ 100)),\n    0\n];\nresult[3] = result[0] + result[1] + result[2];\nreturn result;\n\n\n}\nif(msg.topic == \"dropdown\")\n{\n    for(i = 0; i < file.length; i++)\n    {\n        if(file[i].Naam == msg.payload)\n        {\n            global.set(\"currentLabel\", file[i].Adr);\n            global.set(\"arrayIndex\", i);\n            global.set(\"isThreePhase\", file[i].isThreePhase);\n            return;\n        }\n    }\n}\nelse if(msg.topic == file[arrayIndex].KastNaam)\n{\n    msg.payload = ProcessValues(global.get(\"currentLabel\"));\n    return msg;\n}",
+        "func": "var file = global.get(\"latestJSON\").data;\nvar arrayIndex = global.get(\"arrayIndex\");\nif(global.get('showPower'))\n{\n    showPower = true;\n    msg.label = \"W\"\n}\nelse\n{\n    showPower = false;\n    msg.label = \"mA\";\n}\n\nfunction ProcessValues(index)\n{\n    var dataInput = msg.payload;\n    result =\n    [\n        Math.round(dataInput[(showPower ? index * 2 : index)  + (showPower ? 0 : 0)] * (showPower ? 1 : 10)),\n        Math.round(dataInput[(showPower ? index * 2 : index)  + (showPower ? 2 : 1)] * (showPower ? 1 : 10)),\n        Math.round(dataInput[(showPower ? index * 2 : index)  + (showPower ? 4 : 2)] * (showPower ? 1 : 10)),\n        0\n    ];\n    result[3] = result[0] + result[1] + result[2];\n    return result;\n}\nif(msg.topic == \"dropdown\")\n{\n    for(i = 0; i < file.length; i++)\n    {\n        if(file[i].Naam == msg.payload)\n        {\n            global.set(\"currentLabel\", file[i].Adr);\n            global.set(\"arrayIndex\", i);\n            global.set(\"isThreePhase\", file[i].isThreePhase);\n            return;\n        }\n    }\n}\nelse if(msg.topic.indexOf(file[arrayIndex].KastNaam) != -1)\n{\n    if(msg.topic.slice(-1) == \"I\" && !showPower)\n    {\n        msg.payload = ProcessValues(global.get(\"currentLabel\"));\n        return msg;\n    }\n    else if(msg.topic.slice(-1) == \"P\" && showPower)\n    {\n        msg.payload = ProcessValues(global.get(\"currentLabel\"));\n        return msg;\n    }\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "// Code added here will be run once\n// whenever the node is started.v\n",
@@ -2272,7 +2272,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Record history data",
-        "func": "const d = new Date();\nyear = d.getFullYear().toString();\nmonth = (d.getMonth() + 1).toString().padStart(2, '0');\nday = d.getDate().toString().padStart(2, '0');\nhour = d.getHours();\nminute = d.getMinutes();\nsecond = d.getSeconds();\n\nvar file = global.get(\"latestJSON\").data;\nvar dataInput = msg.payload;\nvar historySave = global.get(\"historySave\") || {};\n\nif(hour != global.get(\"lastHour\"))\n{\n    hourlyData = global.get(\"hourlyData\") || [];\n    hourlyData[hour] = (global.get(\"totalEnergy\")||0) - (global.get(\"lastEnergy\")||0);\n    historySave[\"hourlyData\"] = hourlyData;  //deze\n    global.set(\"lastEnergy\", global.get(\"totalEnergy\"));\n    global.set(\"lastHour\", hour);\n    global.set(\"hourlyData\", hourlyData);\n    console.log(\"Hourly datapoint created\");\n}\n\nif(typeof(historySave) == \"undefined\")\n{\n    historySave = {};\n}\n\nfor(i = 0; i < file.length; i++)\n{\n    if(file[i].KastNaam == msg.topic)\n    {\n        if(historySave[file[i].Naam] == \"undefined\")\n        {\n            historySave.push({Naam : file[i].Naam});\n        }\n        if(file[i].isThreePhase)\n        {\n            historySave[file[i].Naam] = (historySave[file[i].Naam] + (dataInput[file[i].Adr + 0] * 10 * (global.get(\"L1_voltage\") / 1000) * (1/6) * (1/60) / 1000)|| 0);\n            historySave[file[i].Naam] = (historySave[file[i].Naam] + (dataInput[file[i].Adr + 1] * 10 * (global.get(\"L2_voltage\") / 1000) * (1/6) * (1/60) / 1000)|| 0);\n            historySave[file[i].Naam] = (historySave[file[i].Naam] + (dataInput[file[i].Adr + 2] * 10 * (global.get(\"L3_voltage\") / 1000) * (1/6) * (1/60) / 1000)|| 0);\n        }\n        else\n        {\n            historySave[file[i].Naam] = (historySave[file[i].Naam] + (dataInput[file[i].Adr] * 10 * (global.get(\"L1_voltage\") / 1000) * (1/6) * (1/60) / 1000)|| 0);\n        }\n    }\n}\nhistorySave.total = global.get(\"totalEnergy\");\nhistorySave.counter = global.get(\"counter\");\nglobal.set(\"historySave\", historySave);\nmsg.payload = historySave;\nreturn msg;",
+        "func": "const d = new Date();\nyear = d.getFullYear().toString();\nmonth = (d.getMonth() + 1).toString().padStart(2, '0');\nday = d.getDate().toString().padStart(2, '0');\nhour = d.getHours();\nminute = d.getMinutes();\nsecond = d.getSeconds();\n\nvar file = global.get(\"latestJSON\").data;\nvar dataInput = msg.payload;\nvar historySave = global.get(\"historySave\") || {};\n\nif(hour != global.get(\"lastHour\"))\n{\n    hourlyData = global.get(\"hourlyData\") || [];\n    hourlyData[hour] = (global.get(\"totalEnergy\")||0) - (global.get(\"lastEnergy\")||0);\n    historySave[\"hourlyData\"] = hourlyData;\n    global.set(\"lastEnergy\", global.get(\"totalEnergy\"));\n    global.set(\"lastHour\", hour);\n    global.set(\"hourlyData\", hourlyData);\n    console.log(\"Hourly datapoint created\");\n}\n\nif(typeof(historySave) == \"undefined\")\n{\n    historySave = {};\n}\n\nfor(i = 0; i < file.length; i++)\n{\n    if(file[i].KastNaam == msg.topic)\n    {\n        if(historySave[file[i].Naam] == \"undefined\")\n        {\n            historySave.push({Naam : file[i].Naam});\n        }\n        if(file[i].isThreePhase)\n        {\n            historySave[file[i].Naam] = (historySave[file[i].Naam] + (dataInput[file[i].Adr + 0] * 10 * (global.get(\"L1_voltage\") / 1000) * (1/6) * (1/60) / 1000)|| 0);\n            historySave[file[i].Naam] = (historySave[file[i].Naam] + (dataInput[file[i].Adr + 1] * 10 * (global.get(\"L2_voltage\") / 1000) * (1/6) * (1/60) / 1000)|| 0);\n            historySave[file[i].Naam] = (historySave[file[i].Naam] + (dataInput[file[i].Adr + 2] * 10 * (global.get(\"L3_voltage\") / 1000) * (1/6) * (1/60) / 1000)|| 0);\n        }\n        else\n        {\n            historySave[file[i].Naam] = (historySave[file[i].Naam] + (dataInput[file[i].Adr] * 10 * (global.get(\"L1_voltage\") / 1000) * (1/6) * (1/60) / 1000)|| 0);\n        }\n    }\n}\nhistorySave.total = global.get(\"totalEnergy\");\nhistorySave.counter = global.get(\"counter\");\nglobal.set(\"historySave\", historySave);\nmsg.payload = historySave;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2684,7 +2684,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "function 2",
-        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.get(\"totalEnergy\");\n//msg.payload = global.set(\"loadedData\", []);\n//msg.payload = global.get(\"koffieCounter\");\n//msg.payload = global.get(\"KastNaam\");\nmsg.payload = global.get(\"latestJSON\");\nreturn msg;",
+        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.set(\"totalEnergy\", 0);\n//msg.payload = global.set(\"loadedData\", []);\n//msg.payload = global.get(\"koffieCounter\");\n//msg.payload = global.get(\"KastNaam\");\n//msg.payload = global.get(\"latestJSON\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2721,14 +2721,14 @@
         "id": "bf45c2b5e36d54f6",
         "type": "function",
         "z": "e7a7e61768dadc02",
-        "name": "Meterkast_KK_LK",
-        "func": "msg.payload = \n{\n   'address' : '0', \n   'quantity': '42'\n}\nmsg.topic = \"Meterkast_KK_LK\";\nreturn msg;",
+        "name": "Meterkast_KK_LK (Current)",
+        "func": "msg.payload = \n{\n   'address' : '0', \n   'quantity': '42'\n}\nmsg.topic = \"Meterkast_KK_LK_I\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 290,
+        "x": 320,
         "y": 660,
         "wires": [
             [
@@ -2740,14 +2740,14 @@
         "id": "bc9659561bec9aef",
         "type": "function",
         "z": "e7a7e61768dadc02",
-        "name": "Regelkast_RK1",
-        "func": "msg.payload = \n{\n   'address' : '0', \n   'quantity': '37'\n}\nmsg.topic = \"Regelkast_RK1\";\nreturn msg;",
+        "name": "Regelkast_RK1 (Current)",
+        "func": "msg.payload = \n{\n   'address' : '0', \n   'quantity': '37'\n}\nmsg.topic = \"Regelkast_RK1_I\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 280,
+        "x": 310,
         "y": 700,
         "wires": [
             [
@@ -2819,7 +2819,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "TotalPower",
-        "func": "i1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = msg.payload[16];\np2 = msg.payload[17];\np3 = msg.payload[18];\n\nenergy = msg.payload[36];\nenergy_dx = energy - (global.get(\"oldEnergy\") || 0);\nglobal.set(\"oldEnergy\", energy);\nglobal.set(\"totalEnergy\", (global.get(\"totalEnergy\")||0) + energy_dx);\n\n\n\nPower = msg.payload[15] / 100;\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 80;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 400;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(Power * 10) / 10;\nmsg.debug = energy;\nreturn msg;",
+        "func": "i1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = msg.payload[16];\np2 = msg.payload[17];\np3 = msg.payload[18];\n\nenergy = msg.payload[44];\nenergy_dx = energy - (global.get(\"oldEnergy\") || 0);\nglobal.set(\"oldEnergy\", energy);\nglobal.set(\"totalEnergy\", (global.get(\"totalEnergy\")||0) + energy_dx);\nconsole.log(energy);\n\n\nPower = msg.payload[15] / 100;\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 80;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 400;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(Power * 10) / 10;\nmsg.debug = energy;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3017,7 +3017,9 @@
                 "4f4d728da90688b3",
                 "6ad8675063f8467f",
                 "a3b3ecf58da0c660",
-                "646b3012069be12b"
+                "646b3012069be12b",
+                "e2ad94c9b826fad7",
+                "1c23db13a19fc676"
             ]
         ]
     },
@@ -3888,7 +3890,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "HVK",
-        "func": "msg.payload = \n{\n   'address' : '40072', \n   'quantity': '40',\n}\nmsg.topic = \"Verkerk HVK\";\nreturn msg;",
+        "func": "msg.payload = \n{\n   'address' : '40072', \n   'quantity': '80',\n}\nmsg.topic = \"Verkerk HVK\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4948,6 +4950,90 @@
         "wires": [
             [
                 "7b3a2ab62cb20b3d"
+            ]
+        ]
+    },
+    {
+        "id": "a78bc7d08c0e78b6",
+        "type": "modbus-flex-getter",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "e64cb74f6622eebb",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 550,
+        "y": 580,
+        "wires": [
+            [
+                "390436a40819281a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "26c862237292ad2b",
+        "type": "modbus-flex-getter",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "e109d36b633b2a51",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 550,
+        "y": 620,
+        "wires": [
+            [
+                "390436a40819281a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "1c23db13a19fc676",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "Meterkast_KK_LK (Power)",
+        "func": "msg.payload = \n{\n   'address' : '8704', \n   'quantity': '84'\n}\nmsg.topic = \"Meterkast_KK_LK_P\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 580,
+        "wires": [
+            [
+                "a78bc7d08c0e78b6"
+            ]
+        ]
+    },
+    {
+        "id": "e2ad94c9b826fad7",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "Regelkast_RK1 (Power)",
+        "func": "msg.payload = \n{\n   'address' : '8704', \n   'quantity': '74'\n}\nmsg.topic = \"Regelkast_RK1_P\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 620,
+        "wires": [
+            [
+                "26c862237292ad2b"
             ]
         ]
     },
