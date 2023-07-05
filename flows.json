@@ -2684,7 +2684,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "function 2",
-        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.set(\"totalEnergy\", 0);\n//msg.payload = global.set(\"loadedData\", []);\n//msg.payload = global.get(\"koffieCounter\");\n//msg.payload = global.get(\"KastNaam\");\n//msg.payload = global.get(\"latestJSON\");\nreturn msg;",
+        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.set(\"totalEnergy\", 0);\n//msg.payload = global.set(\"loadedData\", []);\nmsg.payload = global.set(\"koffieCounter\", 0);\n//msg.payload = global.get(\"KastNaam\");\n//msg.payload = global.get(\"latestJSON\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
