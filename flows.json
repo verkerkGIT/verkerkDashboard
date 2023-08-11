@@ -5038,6 +5038,75 @@
         ]
     },
     {
+        "id": "1a9a775267aa53cb",
+        "type": "http request",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "google.com",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 390,
+        "y": 2320,
+        "wires": [
+            [
+                "4f21619abdc8d998"
+            ]
+        ]
+    },
+    {
+        "id": "4f21619abdc8d998",
+        "type": "debug",
+        "z": "e7a7e61768dadc02",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 2320,
+        "wires": []
+    },
+    {
+        "id": "ddb6d27ead3bd51a",
+        "type": "inject",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 2320,
+        "wires": [
+            [
+                "1a9a775267aa53cb"
+            ]
+        ]
+    },
+    {
         "id": "b1456c6040d91a11",
         "type": "ui_gauge",
         "z": "5368e8a6e61eb499",
