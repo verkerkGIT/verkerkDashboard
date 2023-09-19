@@ -935,27 +935,6 @@
         "className": ""
     },
     {
-        "id": "db5127f2c5111db3",
-        "type": "BACnet-Instance",
-        "name": "B01'Flr01'CenWthStn'CenWthStn'TOa",
-        "instanceAddress": "2"
-    },
-    {
-        "id": "ab1bf5be09f6552c",
-        "type": "BACnet-Device",
-        "name": "PC",
-        "deviceAddress": "172.28.132.74"
-    },
-    {
-        "id": "994f202b87707ab6",
-        "type": "BACnet-Client",
-        "name": "Weerstation",
-        "adpuTimeout": "3000",
-        "port": "47808",
-        "interface": "192.168.94.72",
-        "broadcastAddress": "192.168.94.255"
-    },
-    {
         "id": "7256f36cc4dd9485",
         "type": "ui_group",
         "name": "Weerstation",
