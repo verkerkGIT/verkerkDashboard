@@ -5062,23 +5062,6 @@
         ]
     },
     {
-        "id": "bf874e495e86a417",
-        "type": "debug",
-        "z": "e7a7e61768dadc02",
-        "name": "debug 25",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 600,
-        "y": 2400,
-        "wires": []
-    },
-    {
         "id": "e6886b30da4dfc41",
         "type": "Bacnet-Gateway",
         "z": "e7a7e61768dadc02",
@@ -5111,7 +5094,6 @@
         "y": 2400,
         "wires": [
             [
-                "bf874e495e86a417",
                 "c0530701ebcf3cdf"
             ]
         ]
@@ -5705,11 +5687,10 @@
         "finalize": "",
         "libs": [],
         "x": 620,
-        "y": 2360,
+        "y": 2400,
         "wires": [
             [
-                "d4254ddd3ea30a2f",
-                "eba24238bb99a428"
+                "d4254ddd3ea30a2f"
             ]
         ]
     },
@@ -5729,27 +5710,10 @@
         "templateScope": "local",
         "className": "",
         "x": 820,
-        "y": 2360,
+        "y": 2400,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "eba24238bb99a428",
-        "type": "debug",
-        "z": "e7a7e61768dadc02",
-        "name": "debug 26",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 2400,
-        "wires": []
     },
     {
         "id": "b1456c6040d91a11",
