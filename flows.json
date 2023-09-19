@@ -40,6 +40,14 @@
         "env": []
     },
     {
+        "id": "e59ccc493ab8713f",
+        "type": "tab",
+        "label": "node-bacnet-contrib-extended example flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2924702c.b33a7",
         "type": "subflow",
         "name": "ui-table handler",
@@ -923,6 +931,38 @@
         "order": 1,
         "disp": true,
         "width": 20,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "db5127f2c5111db3",
+        "type": "BACnet-Instance",
+        "name": "B01'Flr01'CenWthStn'CenWthStn'TOa",
+        "instanceAddress": "2"
+    },
+    {
+        "id": "ab1bf5be09f6552c",
+        "type": "BACnet-Device",
+        "name": "PC",
+        "deviceAddress": "172.28.132.74"
+    },
+    {
+        "id": "994f202b87707ab6",
+        "type": "BACnet-Client",
+        "name": "Weerstation",
+        "adpuTimeout": "3000",
+        "port": "47808",
+        "interface": "192.168.94.72",
+        "broadcastAddress": "192.168.94.255"
+    },
+    {
+        "id": "7256f36cc4dd9485",
+        "type": "ui_group",
+        "name": "Weerstation",
+        "tab": "07e861757daa32cb",
+        "order": 11,
+        "disp": true,
+        "width": "8",
         "collapse": false,
         "className": ""
     },
@@ -2731,9 +2771,7 @@
         "x": 320,
         "y": 660,
         "wires": [
-            [
-                "0fc427c64be15578"
-            ]
+            []
         ]
     },
     {
@@ -2750,9 +2788,7 @@
         "x": 310,
         "y": 700,
         "wires": [
-            [
-                "f3e8bee8253e84fe"
-            ]
+            []
         ]
     },
     {
@@ -2973,9 +3009,7 @@
         "x": 310,
         "y": 740,
         "wires": [
-            [
-                "f21414123e14150c"
-            ]
+            []
         ]
     },
     {
@@ -2992,9 +3026,7 @@
         "x": 300,
         "y": 780,
         "wires": [
-            [
-                "48c710db6601624c"
-            ]
+            []
         ]
     },
     {
@@ -3899,9 +3931,7 @@
         "x": 250,
         "y": 820,
         "wires": [
-            [
-                "f20858f876d3fb1a"
-            ]
+            []
         ]
     },
     {
@@ -3962,9 +3992,7 @@
         "x": 260,
         "y": 860,
         "wires": [
-            [
-                "bc60818cdc9af360"
-            ]
+            []
         ]
     },
     {
@@ -4203,9 +4231,9 @@
         "z": "e7a7e61768dadc02",
         "group": "dfda6830323e39d4",
         "name": "Koffie teller",
-        "order": 2,
-        "width": "8",
-        "height": "4",
+        "order": 1,
+        "width": 8,
+        "height": 4,
         "format": "<script src=\"https://kit.fontawesome.com/1d88fd5114.js\" crossorigin=\"anonymous\"></script>\n<style>\n.coffeecup\n{\n    height: 100px;\n    width: 30%;\n    font-size:20px;\n    padding-bottom: 0px;\n}\n.coffeetext\n{\n    font-size:25px;\n    font-weight:bold;\n    text-align: center;\n    padding-bottom: 20px;\n}\n.coffeenum\n{\n    width: 396px;\n    color: #333333;\n    z-index: 2;\n    position: absolute;\n    padding-top: 5px;\n    font-weight: bold;\n    font-size: 35px;\n}\n</style>\n\n<table class=\"display\">\n    <tr>\n        <td class=\"coffeecup\">\n            <div class=\"coffeenum\">{{msg.coffeecount}}</div>\n            <i class=\"fa-solid fa-mug-saucer fa-4x\"></i>\n        </td>\n    </tr>\n    <tr>\n        <td class=\"coffeetext\">\n            Kopjes gezet vandaag\n        </td>\n    </tr>\n</table>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
@@ -5013,9 +5041,7 @@
         "x": 320,
         "y": 580,
         "wires": [
-            [
-                "a78bc7d08c0e78b6"
-            ]
+            []
         ]
     },
     {
@@ -5032,54 +5058,613 @@
         "x": 310,
         "y": 620,
         "wires": [
-            [
-                "26c862237292ad2b"
-            ]
+            []
         ]
     },
     {
-        "id": "1a9a775267aa53cb",
-        "type": "http request",
-        "z": "e7a7e61768dadc02",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "google.com",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "insecureHTTPParser": false,
-        "authType": "",
-        "senderr": false,
-        "headers": [],
-        "x": 390,
-        "y": 2320,
-        "wires": [
-            [
-                "4f21619abdc8d998"
-            ]
-        ]
-    },
-    {
-        "id": "4f21619abdc8d998",
+        "id": "bf874e495e86a417",
         "type": "debug",
         "z": "e7a7e61768dadc02",
-        "name": "debug 16",
+        "name": "debug 25",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 560,
-        "y": 2320,
+        "x": 600,
+        "y": 2400,
         "wires": []
     },
     {
-        "id": "ddb6d27ead3bd51a",
-        "type": "inject",
+        "id": "e6886b30da4dfc41",
+        "type": "Bacnet-Gateway",
+        "z": "e7a7e61768dadc02",
+        "name": "test",
+        "local_device_address": "172.28.132.74",
+        "apduTimeout": 6000,
+        "roundDecimal": 2,
+        "local_device_port": 47808,
+        "apduSize": "5",
+        "maxSegments": "0x50",
+        "retries": "5",
+        "broadCastAddr": "192.168.94.72",
+        "toLogIam": false,
+        "discover_polling_schedule": "60",
+        "discover_polling_schedule_value": "1",
+        "discover_polling_schedule_options": "Minutes",
+        "device_id_range_enabled": false,
+        "device_id_range_start": 0,
+        "device_id_range_end": 4194303,
+        "deviceId": "1001",
+        "manual_instance_range_enabled": false,
+        "manual_instance_range_start": 0,
+        "manual_instance_range_end": 10000,
+        "logErrorToConsole": true,
+        "serverEnabled": false,
+        "device_read_schedule": "60",
+        "device_read_schedule_value": "1",
+        "device_read_schedule_options": "Minutes",
+        "x": 450,
+        "y": 2400,
+        "wires": [
+            [
+                "bf874e495e86a417",
+                "c0530701ebcf3cdf"
+            ]
+        ]
+    },
+    {
+        "id": "98617c4e03f74da8",
+        "type": "Bacnet-Discovery",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "events": true,
+        "json": true,
+        "mqtt": false,
+        "hiddenDeployToggle": false,
+        "prevHiddenToggleState": false,
+        "roundDecimal": 2,
+        "pointsToRead": {
+            "192.168.94.72-1001": {
+                "B01'Flr01'CenWthStn'CenWthStn'TOa": {
+                    "meta": {
+                        "objectId": {
+                            "type": 0,
+                            "instance": 2
+                        }
+                    },
+                    "description": "Buitentemperatuur",
+                    "objectID": {
+                        "type": 0,
+                        "instance": 2
+                    },
+                    "objectName": "B01'Flr01'CenWthStn'CenWthStn'TOa",
+                    "presentValue": 22.9,
+                    "units": "degrees-celsius"
+                },
+                "B01'Flr01'CenWthStn'CenWthStn'WdSpd": {
+                    "meta": {
+                        "objectId": {
+                            "type": 0,
+                            "instance": 0
+                        }
+                    },
+                    "description": "Windsnelheid",
+                    "objectID": {
+                        "type": 0,
+                        "instance": 0
+                    },
+                    "objectName": "B01'Flr01'CenWthStn'CenWthStn'WdSpd",
+                    "presentValue": 0.7,
+                    "units": "meters-per-second"
+                },
+                "B01'Flr01'CenWthStn'CenWthStn'HuRelOa": {
+                    "meta": {
+                        "objectId": {
+                            "type": 0,
+                            "instance": 3
+                        }
+                    },
+                    "description": "Relatieve vochtigheid buitenlucht",
+                    "objectID": {
+                        "type": 0,
+                        "instance": 3
+                    },
+                    "objectName": "B01'Flr01'CenWthStn'CenWthStn'HuRelOa",
+                    "presentValue": 48.1,
+                    "units": "percent"
+                },
+                "B01'Flr01'CenWthStn'CenWthStn'Brgt(South)": {
+                    "meta": {
+                        "objectId": {
+                            "type": 0,
+                            "instance": 5
+                        }
+                    },
+                    "description": "Lichtintensiteit (Zuid)",
+                    "objectID": {
+                        "type": 0,
+                        "instance": 5
+                    },
+                    "objectName": "B01'Flr01'CenWthStn'CenWthStn'Brgt(South)",
+                    "presentValue": 78.7,
+                    "units": "no-units"
+                },
+                "B01'Flr01'CenWthStn'CenWthStn'Brgt(West)": {
+                    "meta": {
+                        "objectId": {
+                            "type": 0,
+                            "instance": 6
+                        }
+                    },
+                    "description": "Lichtintensiteit (West)",
+                    "objectID": {
+                        "type": 0,
+                        "instance": 6
+                    },
+                    "objectName": "B01'Flr01'CenWthStn'CenWthStn'Brgt(West)",
+                    "presentValue": 44,
+                    "units": "no-units"
+                },
+                "B01'Flr01'CenWthStn'CenWthStn'Brgt(East)": {
+                    "meta": {
+                        "objectId": {
+                            "type": 0,
+                            "instance": 7
+                        }
+                    },
+                    "description": "Lichtintensiteit (Oost)",
+                    "objectID": {
+                        "type": 0,
+                        "instance": 7
+                    },
+                    "objectName": "B01'Flr01'CenWthStn'CenWthStn'Brgt(East)",
+                    "presentValue": 11.9,
+                    "units": "no-units"
+                },
+                "B01'Flr01'CenWthStn'CenWthStn'AtmP": {
+                    "meta": {
+                        "objectId": {
+                            "type": 0,
+                            "instance": 4
+                        }
+                    },
+                    "description": "Atmosferische luchtdruk",
+                    "objectID": {
+                        "type": 0,
+                        "instance": 4
+                    },
+                    "objectName": "B01'Flr01'CenWthStn'CenWthStn'AtmP",
+                    "presentValue": 1015.4,
+                    "units": "hectopascals"
+                },
+                "B01'Flr01'CenWthStn'CenWthStn'WdDrct": {
+                    "meta": {
+                        "objectId": {
+                            "type": 0,
+                            "instance": 1
+                        }
+                    },
+                    "description": "Windrichting",
+                    "objectID": {
+                        "type": 0,
+                        "instance": 1
+                    },
+                    "objectName": "B01'Flr01'CenWthStn'CenWthStn'WdDrct",
+                    "presentValue": 1.9,
+                    "units": "degrees-angular"
+                }
+            }
+        },
+        "readDevices": [
+            {
+                "key": 0,
+                "label": "AS1001",
+                "data": "AS1001",
+                "icon": "pi pi-share-alt",
+                "children": [
+                    {
+                        "key": "0-3",
+                        "label": "B01'Flr01'CenWthStn'CenWthStn'TOa_AI_2",
+                        "data": "B01'Flr01'CenWthStn'CenWthStn'TOa_AI_2",
+                        "pointName": "B01'Flr01'CenWthStn'CenWthStn'TOa_AI_2",
+                        "icon": "pi pi-tags",
+                        "children": [
+                            {
+                                "key": "0-3-0",
+                                "label": "Name: B01'Flr01'CenWthStn'CenWthStn'TOa",
+                                "data": "B01'Flr01'CenWthStn'CenWthStn'TOa",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-3-2",
+                                "label": "Object Instance: 2",
+                                "data": 2,
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-3-3",
+                                "label": "Description: Buitentemperatuur",
+                                "data": "Buitentemperatuur",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-3-4",
+                                "label": "Units: degrees-celsius",
+                                "data": "degrees-celsius",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-3-5",
+                                "label": "Present Value: 21.9",
+                                "data": "21.9",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            }
+                        ],
+                        "type": "point",
+                        "parentDevice": "AS1001",
+                        "showAdded": true,
+                        "bacnetType": 0
+                    },
+                    {
+                        "key": "0-1",
+                        "label": "B01'Flr01'CenWthStn'CenWthStn'WdSpd_AI_0",
+                        "data": "B01'Flr01'CenWthStn'CenWthStn'WdSpd_AI_0",
+                        "pointName": "B01'Flr01'CenWthStn'CenWthStn'WdSpd_AI_0",
+                        "icon": "pi pi-tags",
+                        "children": [
+                            {
+                                "key": "0-1-0",
+                                "label": "Name: B01'Flr01'CenWthStn'CenWthStn'WdSpd",
+                                "data": "B01'Flr01'CenWthStn'CenWthStn'WdSpd",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-1-3",
+                                "label": "Description: Windsnelheid",
+                                "data": "Windsnelheid",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-1-4",
+                                "label": "Units: meters-per-second",
+                                "data": "meters-per-second",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-1-5",
+                                "label": "Present Value: 0.7",
+                                "data": "0.7",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            }
+                        ],
+                        "type": "point",
+                        "parentDevice": "AS1001",
+                        "showAdded": true,
+                        "bacnetType": 0
+                    },
+                    {
+                        "key": "0-4",
+                        "label": "B01'Flr01'CenWthStn'CenWthStn'HuRelOa_AI...",
+                        "data": "B01'Flr01'CenWthStn'CenWthStn'HuRelOa_AI...",
+                        "pointName": "B01'Flr01'CenWthStn'CenWthStn'HuRelOa_AI_3",
+                        "icon": "pi pi-tags",
+                        "children": [
+                            {
+                                "key": "0-4-0",
+                                "label": "Name: B01'Flr01'CenWthStn'CenWthStn'HuRelOa",
+                                "data": "B01'Flr01'CenWthStn'CenWthStn'HuRelOa",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-4-2",
+                                "label": "Object Instance: 3",
+                                "data": 3,
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-4-3",
+                                "label": "Description: Relatieve vochtigheid buitenlucht",
+                                "data": "Relatieve vochtigheid buitenlucht",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-4-4",
+                                "label": "Units: percent",
+                                "data": "percent",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-4-5",
+                                "label": "Present Value: 48.1",
+                                "data": "48.1",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            }
+                        ],
+                        "type": "point",
+                        "parentDevice": "AS1001",
+                        "showAdded": true,
+                        "bacnetType": 0
+                    },
+                    {
+                        "key": "0-6",
+                        "label": "B01'Flr01'CenWthStn'CenWthStn'Brgt(South...",
+                        "data": "B01'Flr01'CenWthStn'CenWthStn'Brgt(South...",
+                        "pointName": "B01'Flr01'CenWthStn'CenWthStn'Brgt(South)_AI_5",
+                        "icon": "pi pi-tags",
+                        "children": [
+                            {
+                                "key": "0-6-0",
+                                "label": "Name: B01'Flr01'CenWthStn'CenWthStn'Brgt(South)",
+                                "data": "B01'Flr01'CenWthStn'CenWthStn'Brgt(South)",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-6-2",
+                                "label": "Object Instance: 5",
+                                "data": 5,
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-6-3",
+                                "label": "Description: Lichtintensiteit (Zuid)",
+                                "data": "Lichtintensiteit (Zuid)",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-6-4",
+                                "label": "Units: no-units",
+                                "data": "no-units",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-6-5",
+                                "label": "Present Value: 78.7",
+                                "data": "78.7",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            }
+                        ],
+                        "type": "point",
+                        "parentDevice": "AS1001",
+                        "showAdded": true,
+                        "bacnetType": 0
+                    },
+                    {
+                        "key": "0-7",
+                        "label": "B01'Flr01'CenWthStn'CenWthStn'Brgt(West)...",
+                        "data": "B01'Flr01'CenWthStn'CenWthStn'Brgt(West)...",
+                        "pointName": "B01'Flr01'CenWthStn'CenWthStn'Brgt(West)_AI_6",
+                        "icon": "pi pi-tags",
+                        "children": [
+                            {
+                                "key": "0-7-0",
+                                "label": "Name: B01'Flr01'CenWthStn'CenWthStn'Brgt(West)",
+                                "data": "B01'Flr01'CenWthStn'CenWthStn'Brgt(West)",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-7-2",
+                                "label": "Object Instance: 6",
+                                "data": 6,
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-7-3",
+                                "label": "Description: Lichtintensiteit (West)",
+                                "data": "Lichtintensiteit (West)",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-7-4",
+                                "label": "Units: no-units",
+                                "data": "no-units",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-7-5",
+                                "label": "Present Value: 44",
+                                "data": "44",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            }
+                        ],
+                        "type": "point",
+                        "parentDevice": "AS1001",
+                        "showAdded": true,
+                        "bacnetType": 0
+                    },
+                    {
+                        "key": "0-8",
+                        "label": "B01'Flr01'CenWthStn'CenWthStn'Brgt(East)...",
+                        "data": "B01'Flr01'CenWthStn'CenWthStn'Brgt(East)...",
+                        "pointName": "B01'Flr01'CenWthStn'CenWthStn'Brgt(East)_AI_7",
+                        "icon": "pi pi-tags",
+                        "children": [
+                            {
+                                "key": "0-8-0",
+                                "label": "Name: B01'Flr01'CenWthStn'CenWthStn'Brgt(East)",
+                                "data": "B01'Flr01'CenWthStn'CenWthStn'Brgt(East)",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-8-2",
+                                "label": "Object Instance: 7",
+                                "data": 7,
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-8-3",
+                                "label": "Description: Lichtintensiteit (Oost)",
+                                "data": "Lichtintensiteit (Oost)",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-8-4",
+                                "label": "Units: no-units",
+                                "data": "no-units",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-8-5",
+                                "label": "Present Value: 11.9",
+                                "data": "11.9",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            }
+                        ],
+                        "type": "point",
+                        "parentDevice": "AS1001",
+                        "showAdded": true,
+                        "bacnetType": 0
+                    },
+                    {
+                        "key": "0-5",
+                        "label": "B01'Flr01'CenWthStn'CenWthStn'AtmP_AI_4",
+                        "data": "B01'Flr01'CenWthStn'CenWthStn'AtmP_AI_4",
+                        "pointName": "B01'Flr01'CenWthStn'CenWthStn'AtmP_AI_4",
+                        "icon": "pi pi-tags",
+                        "children": [
+                            {
+                                "key": "0-5-0",
+                                "label": "Name: B01'Flr01'CenWthStn'CenWthStn'AtmP",
+                                "data": "B01'Flr01'CenWthStn'CenWthStn'AtmP",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-5-2",
+                                "label": "Object Instance: 4",
+                                "data": 4,
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-5-3",
+                                "label": "Description: Atmosferische luchtdruk",
+                                "data": "Atmosferische luchtdruk",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-5-4",
+                                "label": "Units: hectopascals",
+                                "data": "hectopascals",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-5-5",
+                                "label": "Present Value: 1015.4",
+                                "data": "1015.4",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            }
+                        ],
+                        "type": "point",
+                        "parentDevice": "AS1001",
+                        "showAdded": true,
+                        "bacnetType": 0
+                    },
+                    {
+                        "key": "0-2",
+                        "label": "B01'Flr01'CenWthStn'CenWthStn'WdDrct_AI_...",
+                        "data": "B01'Flr01'CenWthStn'CenWthStn'WdDrct_AI_...",
+                        "pointName": "B01'Flr01'CenWthStn'CenWthStn'WdDrct_AI_1",
+                        "icon": "pi pi-tags",
+                        "children": [
+                            {
+                                "key": "0-2-0",
+                                "label": "Name: B01'Flr01'CenWthStn'CenWthStn'WdDrct",
+                                "data": "B01'Flr01'CenWthStn'CenWthStn'WdDrct",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-2-2",
+                                "label": "Object Instance: 1",
+                                "data": 1,
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-2-3",
+                                "label": "Description: Windrichting",
+                                "data": "Windrichting",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-2-4",
+                                "label": "Units: degrees-angular",
+                                "data": "degrees-angular",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            },
+                            {
+                                "key": "0-2-5",
+                                "label": "Present Value: 1.9",
+                                "data": "1.9",
+                                "icon": "pi pi-bolt",
+                                "children": null
+                            }
+                        ],
+                        "type": "point",
+                        "parentDevice": "AS1001",
+                        "showAdded": true,
+                        "bacnetType": 0
+                    }
+                ],
+                "type": "device",
+                "lastSeen": 1694784750484,
+                "showAdded": false,
+                "ipAddr": "192.168.94.72",
+                "deviceId": 1001,
+                "isMstpDevice": true
+            }
+        ],
+        "object_property_simplePayload": false,
+        "object_property_fullObject": true,
+        "x": 310,
+        "y": 2400,
+        "wires": [
+            [
+                "e6886b30da4dfc41"
+            ]
+        ]
+    },
+    {
+        "id": "1fca00ff3c461c73",
+        "type": "Bitpool-Inject",
         "z": "e7a7e61768dadc02",
         "name": "",
         "props": [
@@ -5093,18 +5678,78 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
+        "once": true,
+        "onceDelay": "5",
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 2320,
+        "doPoll": true,
+        "doDiscover": false,
+        "x": 170,
+        "y": 2400,
         "wires": [
             [
-                "1a9a775267aa53cb"
+                "98617c4e03f74da8"
             ]
         ]
+    },
+    {
+        "id": "c0530701ebcf3cdf",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "Display weather",
+        "func": "const owIconMap = new Map();\nowIconMap.set('01d', 'wi-day-sunny'); // clear sky\nowIconMap.set('02d', 'wi-day-cloudy'); // few clouds\nowIconMap.set('03d', 'wi-cloud'); // scattered clouds\nowIconMap.set('04d', 'wi-cloudy'); // broken clouds\nowIconMap.set('09d', 'wi-day-showers'); // shower rain\nowIconMap.set('10d', 'wi-day-rain'); // rain\nowIconMap.set('11d', 'wi-thunderstorm'); // thunderstorm\nowIconMap.set('13d', 'wi-snow'); // snow\nowIconMap.set('50d', 'wi-fog'); // mist\nowIconMap.set('01n', 'wi-night-clear'); // clear sky\nowIconMap.set('02n', 'wi-night-alt-cloudy'); // few clouds\nowIconMap.set('03n', 'wi-cloud'); // scattered clouds\nowIconMap.set('04n', 'wi-cloudy'); // broken clouds\nowIconMap.set('09n', 'wi-night-alt-showers'); // shower rain\nowIconMap.set('10n', 'wi-night-alt-rain'); // rain\nowIconMap.set('11n', 'wi-thunderstorm'); // thunderstorm\nowIconMap.set('13n', 'wi-snow'); // snow\nowIconMap.set('50n', 'wi-fog'); // mist\nfunction capitalizeFirstLetter(string) {\n    return string.charAt(0).toUpperCase() + string.slice(1);\n}\nfunction getBeaufort(metricSpeed)\n{\n    if(metricSpeed >= 0 && metricSpeed <= 0.2)\n    {\n        return \"wi-wind-beaufort-0\";\n    }\n    else if(metricSpeed >= 0.3 && metricSpeed <= 1.5)\n    {\n        return \"wi-wind-beaufort-1\";\n    }\n    else if(metricSpeed >= 1.6 && metricSpeed <= 3.3)\n    {\n        return \"wi-wind-beaufort-2\";\n    }\n    else if(metricSpeed >= 3.4 && metricSpeed <= 5.4)\n    {\n        return \"wi-wind-beaufort-3\";\n    }\n    else if(metricSpeed >= 5.5 && metricSpeed <= 7.9)\n    {\n        return \"wi-wind-beaufort-4\";\n    }\n    else if(metricSpeed >= 8.0 && metricSpeed <= 10.7)\n    {\n        return \"wi-wind-beaufort-5\";\n    }\n    else if(metricSpeed >= 10.8 && metricSpeed <= 13.8)\n    {\n        return \"wi-wind-beaufort-6\";\n    }\n    else if(metricSpeed >= 13.9 && metricSpeed <= 17.1)\n    {\n        return \"wi-wind-beaufort-7\";\n    }\n    else if(metricSpeed >= 17.2 && metricSpeed <= 20.7)\n    {\n        return \"wi-wind-beaufort-8\";\n    }\n    else if(metricSpeed >= 20.8 && metricSpeed <= 24.4)\n    {\n        return \"wi-wind-beaufort-9\";\n    }\n    else if(metricSpeed >= 24.5 && metricSpeed <= 28.4)\n    {\n        return \"wi-wind-beaufort-10\";\n    }\n    else if(metricSpeed >= 28.5 && metricSpeed <= 32.6)\n    {\n        return \"wi-wind-beaufort-11\";\n    }\n    else if(metricSpeed >= 32.7)\n    {\n        return \"wi-wind-beaufort-12\";\n    }\n    \n}\n\nfunction getPressureGauge(current_hPa)\n{\n    //current_hPa = 970; //testing purpose\n    const min = 970;\n    const max = 1050;\n    const gaugeMin = 0;\n    const gaugeMax = 180;\n    const delta_p = max - min;\n    const offset = 10;\n    \n    pos = (current_hPa - min) / delta_p;\n    return (pos * (gaugeMax - gaugeMin) + gaugeMin) + offset;\n}\n\nfunction getSunPos(west, south, east)\n{\n    position = ((-west) + east) * (1 / south);\n    if(position > 126)\n    {\n        position = 126;\n    }\n    else if(position < -126)\n    {\n        position = -126;\n    }\n    return position * 126;\n}\n\nfunction getWindDirChar(angle)\n{\n    angle = angle + 22.5;\n    if(angle >= 0 && angle < 45)\n    {\n        return \"N\";\n    }\n    else if(angle >= 45 && angle < 90)\n    {\n        return \"NO\";\n    }\n    else if(angle >= 90 && angle < 135)\n    {\n        return \"O\";\n    }\n    else if(angle >= 135 && angle < 180)\n    {\n        return \"ZO\";\n    }\n    else if(angle >= 180 && angle < 225)\n    {\n        return \"Z\";\n    }\n    else if(angle >= 225 && angle < 270)\n    {\n        return \"ZW\";\n    }\n    else if(angle >= 270 && angle < 315)\n    {\n        return \"W\";\n    }\n    else if(angle >= 315 && angle < 360)\n    {\n        return \"NW\";\n    }\n}\nmsg.temperature_low = msg.payload.temp_minc;\nmsg.temperature = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'TOa\"].presentValue;\nmsg.temperature_high = msg.payload.temp_maxc;\nmsg.windspeed = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdSpd\"].presentValue * 3.6);\nmsg.humidity = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'HuRelOa\"].presentValue);\nmsg.windIcon = getBeaufort(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdSpd\"].presentValue);\nmsg.lx_w = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(West)\"].presentValue);\nmsg.lx_z = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(South)\"].presentValue);\nmsg.lx_o = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(East)\"].presentValue);\nmsg.pressure = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'AtmP\"].presentValue);\nmsg.pressurePos = getPressureGauge(msg.pressure);\nmsg.sunPos = getSunPos(msg.lx_w, msg.lx_z, msg.lx_o);\nmsg.windDir = -45 + Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdDrct\"].presentValue);\nmsg.windDirChar = getWindDirChar(Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdDrct\"].presentValue));\n\n\nmsg.icon = owIconMap.get(msg.payload.icon);\nif(msg.payload.icon == \"01d\")\n{\n    msg.color = \"yellow\";\n}\nelse if(msg.payload.icon == \"02d\" || msg.payload.icon == \"10d\" || msg.payload.icon == \"09d\")\n{\n    msg.color = \"White\";\n}\nelse\n{\n    msg.color = \"LightGray\";\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 2360,
+        "wires": [
+            [
+                "d4254ddd3ea30a2f",
+                "eba24238bb99a428"
+            ]
+        ]
+    },
+    {
+        "id": "d4254ddd3ea30a2f",
+        "type": "ui_template",
+        "z": "e7a7e61768dadc02",
+        "group": "7256f36cc4dd9485",
+        "name": "Weather Display",
+        "order": 3,
+        "width": 8,
+        "height": 10,
+        "format": "<style>\ntable, th, td {\n  border: 0px solid black;\n  text-align: center;\n  table-layout: fixed;\n}\nth, td {\n  padding: 0px;\n}\n.hPa-container\n{\n    position: relative;\n    /*right: 310px;*/\n    /*bottom: 40px;*/\n}\n.hPa-bar-bg \n{\n    position: relative;\n    width: 180px; /* Set the width of the rectangle */\n    height: 15px; /* Set the height of the rectangle */\n    background: linear-gradient(to right, blue, red);\n    border: 2px solid white; /* Optional border */\n    border-radius: 15px;\n    left: 5%;\n    top: 15px;\n    z-index: 1;\n}\n.hPa-bar-val \n{\n    width: 3px; /* Set the width of the rectangle */\n    height: 29px; /* Set the height of the rectangle */\n    background-color: white; /* Set the background color */\n    position: relative;\n    border-radius: 3px;\n    z-index: 2;\n    bottom: 9px;\n}\n.sunPos\n{\n    position: relative;\n}\n.sunIcon\n{\n    position: relative;\n    bottom: 25px;\n    color: yellow;\n}\n.sunBar\n{\n    position: relative;\n    width: 200px; /* Set the width of the rectangle */\n    height: 38px; /* Set the height of the rectangle */\n    background: #ffffff3d;\n    border: 2px solid white; /* Optional border */\n    top: 12px;\n    border-radius: 25px;\n    z-index: 0;\n}\n</style>\n<link rel=\"stylesheet\" href=\"/weather-icons/mycss/weather-icons.min.css\">\n<script src=\"https://kit.fontawesome.com/1d88fd5114.js\" crossorigin=\"anonymous\"></script>\n\n<table style=\"display: flex;height: 100%;justify-content: center;align-items: top; line-height: 200%;\">\n    \n<tr>\n    <th colspan=\"3\" width=\"375px\">\n        <b style=\"color: White; font-size:40px\">Weerstation VSS</b>\n    </th>\n</tr>\n\n<tr>\n    <td style=\"padding: 0px\" colspan=\"3\">\n        <b style=\"color: white; font-size:15px\">Momenteel geen regen</b>\n    </td>\n</tr>\n<tr>\n    <td width=\"33%\">\n    </td>\n    <td width=\"34%\">\n        <b style=\"color: White; font-size:40px;\">Nu</b>\n    </td>\n    <td width=\"33%\">\n    </td>\n</tr>\n\n<tr>\n    <td>\n    </td>\n    <td>\n        <b style=\"color: white; font-size:40px;\">{{msg.temperature}}°C</b>\n    </td>\n    <td>\n    </td>\n</tr>\n<tr height=\"20px\"></tr>\n<tr style=\"color: White\">\n    <td>\n        <i class=\"fa-3x wi wi-wu- {{msg.windIcon}}\"></i>\n    </td>\n    <td>\n        <i class=\"fa-3x fa-solid fa-location-arrow\" style=\"transform: rotate({{msg.windDir}}deg)\"></i>\n    </td>\n    <td>\n        <i class=\"fa-2x wi wi-wu- wi-humidity\"></i>  \n    </td>\n</tr>\n<tr>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.windspeed}} km/u</b>\n    </td>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.windDirChar}}</b>\n    </td>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.humidity}}%</b>\n    </td>\n</tr>\n\n<tr>\n    <td >\n        \n    </td>\n    <td>\n        <b>Z</b>\n    </td>\n    <td >\n        \n    </td>\n</tr>\n<tr>\n    <td >\n        <b>W\n        <br>{{msg.lx_w}} lx</b>\n    </td>\n    <td>\n        <div class=\"sunBar\"></div>\n        <div class=\"sunPos\" style=\"left: {{msg.sunPos}}px;\">\n            <i class=\"fa-2x fa-fade wi wi-wu- wi-day-sunny sunIcon\"></i>\n        </div>\n        <b style=\"position: relative;bottom: 23px;\">{{msg.lx_z}} lx</b>\n    </td>\n    <td >\n        <b>O\n        <br>{{msg.lx_o}} lx</b>\n    </td>\n</tr>\n\n<tr>\n    <td >\n        <i class=\"fa-solid fa-gauge fa-2xl\"></i>\n    </td>\n    <td >\n        <div class=\"hPa-container\">\n            <div class=\"hPa-bar-bg\"></div>\n            <div class=\"hPa-bar-val\" style=\"left: {{msg.pressurePos}}px;\" ></div>\n        </div>\n    </td>\n    <td >\n        <b>{{msg.pressure}} hPa</b>\n    </td>\n</tr>\n\n\n</table>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 820,
+        "y": 2360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eba24238bb99a428",
+        "type": "debug",
+        "z": "e7a7e61768dadc02",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 2400,
+        "wires": []
     },
     {
         "id": "b1456c6040d91a11",
