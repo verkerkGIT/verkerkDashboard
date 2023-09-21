@@ -5637,10 +5637,10 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "60",
         "crontab": "",
         "once": true,
-        "onceDelay": "5",
+        "onceDelay": "1",
         "topic": "",
         "payload": "",
         "payloadType": "date",
