@@ -1415,7 +1415,7 @@
         "order": 1,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1426,7 +1426,7 @@
         "order": 2,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1437,7 +1437,7 @@
         "order": 5,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1448,7 +1448,7 @@
         "order": 3,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1459,7 +1459,7 @@
         "order": 4,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1470,7 +1470,7 @@
         "order": 7,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1481,7 +1481,7 @@
         "order": 8,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1599,7 +1599,7 @@
         "order": 9,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
     },
     {
@@ -1609,8 +1609,8 @@
         "tab": "07e861757daa32cb",
         "order": 10,
         "disp": true,
-        "width": 8,
-        "collapse": false,
+        "width": "8",
+        "collapse": true,
         "className": ""
     },
     {
@@ -1632,27 +1632,8 @@
         "order": 11,
         "disp": true,
         "width": "8",
-        "collapse": false,
+        "collapse": true,
         "className": ""
-    },
-    {
-        "id": "9f6bc73b46e92c7f",
-        "type": "ui_group",
-        "name": "Visualisations",
-        "tab": "7b45e36c1e982189",
-        "order": 5,
-        "disp": true,
-        "width": "24",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "7b45e36c1e982189",
-        "type": "ui_tab",
-        "name": "Solar predictions",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "5eb0bd6b.74b794",
@@ -6548,8 +6529,8 @@
         "device_read_schedule": "60",
         "device_read_schedule_value": "1",
         "device_read_schedule_options": "Minutes",
-        "x": 450,
-        "y": 2400,
+        "x": 410,
+        "y": 2180,
         "wires": [
             [
                 "c0530701ebcf3cdf"
@@ -7094,8 +7075,8 @@
         ],
         "object_property_simplePayload": false,
         "object_property_fullObject": true,
-        "x": 310,
-        "y": 2400,
+        "x": 270,
+        "y": 2180,
         "wires": [
             [
                 "e6886b30da4dfc41"
@@ -7125,8 +7106,8 @@
         "payloadType": "date",
         "doPoll": true,
         "doDiscover": false,
-        "x": 170,
-        "y": 2400,
+        "x": 130,
+        "y": 2180,
         "wires": [
             [
                 "98617c4e03f74da8"
@@ -7138,14 +7119,14 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Display weather",
-        "func": "const owIconMap = new Map();\nowIconMap.set('01d', 'wi-day-sunny'); // clear sky\nowIconMap.set('02d', 'wi-day-cloudy'); // few clouds\nowIconMap.set('03d', 'wi-cloud'); // scattered clouds\nowIconMap.set('04d', 'wi-cloudy'); // broken clouds\nowIconMap.set('09d', 'wi-day-showers'); // shower rain\nowIconMap.set('10d', 'wi-day-rain'); // rain\nowIconMap.set('11d', 'wi-thunderstorm'); // thunderstorm\nowIconMap.set('13d', 'wi-snow'); // snow\nowIconMap.set('50d', 'wi-fog'); // mist\nowIconMap.set('01n', 'wi-night-clear'); // clear sky\nowIconMap.set('02n', 'wi-night-alt-cloudy'); // few clouds\nowIconMap.set('03n', 'wi-cloud'); // scattered clouds\nowIconMap.set('04n', 'wi-cloudy'); // broken clouds\nowIconMap.set('09n', 'wi-night-alt-showers'); // shower rain\nowIconMap.set('10n', 'wi-night-alt-rain'); // rain\nowIconMap.set('11n', 'wi-thunderstorm'); // thunderstorm\nowIconMap.set('13n', 'wi-snow'); // snow\nowIconMap.set('50n', 'wi-fog'); // mist\nfunction capitalizeFirstLetter(string) {\n    return string.charAt(0).toUpperCase() + string.slice(1);\n}\nfunction getBeaufort(metricSpeed)\n{\n    if(metricSpeed >= 0 && metricSpeed <= 0.2)\n    {\n        return \"wi-wind-beaufort-0\";\n    }\n    else if(metricSpeed >= 0.3 && metricSpeed <= 1.5)\n    {\n        return \"wi-wind-beaufort-1\";\n    }\n    else if(metricSpeed >= 1.6 && metricSpeed <= 3.3)\n    {\n        return \"wi-wind-beaufort-2\";\n    }\n    else if(metricSpeed >= 3.4 && metricSpeed <= 5.4)\n    {\n        return \"wi-wind-beaufort-3\";\n    }\n    else if(metricSpeed >= 5.5 && metricSpeed <= 7.9)\n    {\n        return \"wi-wind-beaufort-4\";\n    }\n    else if(metricSpeed >= 8.0 && metricSpeed <= 10.7)\n    {\n        return \"wi-wind-beaufort-5\";\n    }\n    else if(metricSpeed >= 10.8 && metricSpeed <= 13.8)\n    {\n        return \"wi-wind-beaufort-6\";\n    }\n    else if(metricSpeed >= 13.9 && metricSpeed <= 17.1)\n    {\n        return \"wi-wind-beaufort-7\";\n    }\n    else if(metricSpeed >= 17.2 && metricSpeed <= 20.7)\n    {\n        return \"wi-wind-beaufort-8\";\n    }\n    else if(metricSpeed >= 20.8 && metricSpeed <= 24.4)\n    {\n        return \"wi-wind-beaufort-9\";\n    }\n    else if(metricSpeed >= 24.5 && metricSpeed <= 28.4)\n    {\n        return \"wi-wind-beaufort-10\";\n    }\n    else if(metricSpeed >= 28.5 && metricSpeed <= 32.6)\n    {\n        return \"wi-wind-beaufort-11\";\n    }\n    else if(metricSpeed >= 32.7)\n    {\n        return \"wi-wind-beaufort-12\";\n    }\n    \n}\n\nfunction getPressureGauge(current_hPa)\n{\n    //current_hPa = 970; //testing purpose\n    const min = 970;\n    const max = 1050;\n    const gaugeMin = 0;\n    const gaugeMax = 180;\n    const delta_p = max - min;\n    const offset = 10;\n    \n    pos = (current_hPa - min) / delta_p;\n    return (pos * (gaugeMax - gaugeMin) + gaugeMin) + offset;\n}\n\nfunction getSunPos(west, south, east)\n{\n    position = ((-west) + east) * (1 / south);\n    if(position > 126)\n    {\n        position = 126;\n    }\n    else if(position < -126)\n    {\n        position = -126;\n    }\n    return position * 126;\n}\n\nfunction getWindDirChar(angle)\n{\n    angle = angle + 22.5;\n    if(angle >= 0 && angle < 45)\n    {\n        return \"Z\";\n    }\n    else if(angle >= 45 && angle < 90)\n    {\n        return \"ZW\";\n    }\n    else if(angle >= 90 && angle < 135)\n    {\n        return \"W\";\n    }\n    else if(angle >= 135 && angle < 180)\n    {\n        return \"NW\";\n    }\n    else if(angle >= 180 && angle < 225)\n    {\n        return \"N\";\n    }\n    else if(angle >= 225 && angle < 270)\n    {\n        return \"NO\";\n    }\n    else if(angle >= 270 && angle < 315)\n    {\n        return \"O\";\n    }\n    else if(angle >= 315 && angle < 360)\n    {\n        return \"ZO\";\n    }\n}\nmsg.temperature_low = msg.payload.temp_minc;\nmsg.temperature = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'TOa\"].presentValue;\nmsg.temperature_high = msg.payload.temp_maxc;\nmsg.windspeed = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdSpd\"].presentValue * 3.6);\nmsg.humidity = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'HuRelOa\"].presentValue);\nmsg.windIcon = getBeaufort(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdSpd\"].presentValue);\nmsg.lx_w = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(West)\"].presentValue;\nmsg.lx_z = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(South)\"].presentValue;\nmsg.lx_o = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(East)\"].presentValue;\nmsg.pressure = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'AtmP\"].presentValue);\nmsg.pressurePos = getPressureGauge(msg.pressure);\nmsg.sunPos = getSunPos(msg.lx_w, msg.lx_z, msg.lx_o);\nmsg.windDir = -45 + Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdDrct\"].presentValue);\nmsg.windDirChar = getWindDirChar(Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdDrct\"].presentValue));\n\n\nmsg.icon = owIconMap.get(msg.payload.icon);\nif(msg.payload.icon == \"01d\")\n{\n    msg.color = \"yellow\";\n}\nelse if(msg.payload.icon == \"02d\" || msg.payload.icon == \"10d\" || msg.payload.icon == \"09d\")\n{\n    msg.color = \"White\";\n}\nelse\n{\n    msg.color = \"LightGray\";\n}\n\n\nreturn msg;",
+        "func": "const owIconMap = new Map();\nowIconMap.set('01d', 'wi-day-sunny'); // clear sky\nowIconMap.set('02d', 'wi-day-cloudy'); // few clouds\nowIconMap.set('03d', 'wi-cloud'); // scattered clouds\nowIconMap.set('04d', 'wi-cloudy'); // broken clouds\nowIconMap.set('09d', 'wi-day-showers'); // shower rain\nowIconMap.set('10d', 'wi-day-rain'); // rain\nowIconMap.set('11d', 'wi-thunderstorm'); // thunderstorm\nowIconMap.set('13d', 'wi-snow'); // snow\nowIconMap.set('50d', 'wi-fog'); // mist\nowIconMap.set('01n', 'wi-night-clear'); // clear sky\nowIconMap.set('02n', 'wi-night-alt-cloudy'); // few clouds\nowIconMap.set('03n', 'wi-cloud'); // scattered clouds\nowIconMap.set('04n', 'wi-cloudy'); // broken clouds\nowIconMap.set('09n', 'wi-night-alt-showers'); // shower rain\nowIconMap.set('10n', 'wi-night-alt-rain'); // rain\nowIconMap.set('11n', 'wi-thunderstorm'); // thunderstorm\nowIconMap.set('13n', 'wi-snow'); // snow\nowIconMap.set('50n', 'wi-fog'); // mist\n\nfunction getBeaufort(metricSpeed)\n{\n    if(metricSpeed >= 0 && metricSpeed <= 0.2)\n    {\n        return \"wi-wind-beaufort-0\";\n    }\n    else if(metricSpeed >= 0.3 && metricSpeed <= 1.5)\n    {\n        return \"wi-wind-beaufort-1\";\n    }\n    else if(metricSpeed >= 1.6 && metricSpeed <= 3.3)\n    {\n        return \"wi-wind-beaufort-2\";\n    }\n    else if(metricSpeed >= 3.4 && metricSpeed <= 5.4)\n    {\n        return \"wi-wind-beaufort-3\";\n    }\n    else if(metricSpeed >= 5.5 && metricSpeed <= 7.9)\n    {\n        return \"wi-wind-beaufort-4\";\n    }\n    else if(metricSpeed >= 8.0 && metricSpeed <= 10.7)\n    {\n        return \"wi-wind-beaufort-5\";\n    }\n    else if(metricSpeed >= 10.8 && metricSpeed <= 13.8)\n    {\n        return \"wi-wind-beaufort-6\";\n    }\n    else if(metricSpeed >= 13.9 && metricSpeed <= 17.1)\n    {\n        return \"wi-wind-beaufort-7\";\n    }\n    else if(metricSpeed >= 17.2 && metricSpeed <= 20.7)\n    {\n        return \"wi-wind-beaufort-8\";\n    }\n    else if(metricSpeed >= 20.8 && metricSpeed <= 24.4)\n    {\n        return \"wi-wind-beaufort-9\";\n    }\n    else if(metricSpeed >= 24.5 && metricSpeed <= 28.4)\n    {\n        return \"wi-wind-beaufort-10\";\n    }\n    else if(metricSpeed >= 28.5 && metricSpeed <= 32.6)\n    {\n        return \"wi-wind-beaufort-11\";\n    }\n    else if(metricSpeed >= 32.7)\n    {\n        return \"wi-wind-beaufort-12\";\n    }\n    \n}\n\nfunction getPressureGauge(current_hPa)\n{\n    const min = 970;\n    const max = 1050;\n    const gaugeMin = 0;\n    const gaugeMax = 180;\n    const delta_p = max - min;\n    const offset = 10;\n    \n    pos = (current_hPa - min) / delta_p;\n    return (pos * (gaugeMax - gaugeMin) + gaugeMin) + offset;\n}\n\nfunction getSunPos(west, south, east)\n{\n    position = ((-west) + east) * (1 / south);\n    if(position > 126)\n    {\n        position = 126;\n    }\n    else if(position < -126)\n    {\n        position = -126;\n    }\n    return position * 126;\n}\n\nfunction getWindDirChar(angle)\n{\n    angle = angle + 22.5;\n    if(angle >= 0 && angle < 45)\n    {\n        return \"Z\";\n    }\n    else if(angle >= 45 && angle < 90)\n    {\n        return \"ZW\";\n    }\n    else if(angle >= 90 && angle < 135)\n    {\n        return \"W\";\n    }\n    else if(angle >= 135 && angle < 180)\n    {\n        return \"NW\";\n    }\n    else if(angle >= 180 && angle < 225)\n    {\n        return \"N\";\n    }\n    else if(angle >= 225 && angle < 270)\n    {\n        return \"NO\";\n    }\n    else if(angle >= 270 && angle < 315)\n    {\n        return \"O\";\n    }\n    else if(angle >= 315 && angle < 360)\n    {\n        return \"ZO\";\n    }\n}\nmsg.temperature_low = msg.payload.temp_minc;\nmsg.temperature = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'TOa\"].presentValue;\nmsg.temperature_high = msg.payload.temp_maxc;\nmsg.windspeed = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdSpd\"].presentValue * 3.6);\nmsg.humidity = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'HuRelOa\"].presentValue);\nmsg.windIcon = getBeaufort(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdSpd\"].presentValue);\nmsg.lx_w = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(West)\"].presentValue;\nmsg.lx_z = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(South)\"].presentValue;\nmsg.lx_o = msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'Brgt(East)\"].presentValue;\nmsg.pressure = Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'AtmP\"].presentValue);\nmsg.pressurePos = getPressureGauge(msg.pressure);\nmsg.sunPos = getSunPos(msg.lx_w, msg.lx_z, msg.lx_o);\nmsg.windDir = -45 + Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdDrct\"].presentValue);\nmsg.windDirChar = getWindDirChar(Math.round(msg.payload[\"B01'Flr01'CenWthStn'CenWthStn'WdDrct\"].presentValue));\n\n\nmsg.icon = owIconMap.get(msg.payload.icon);\nif(msg.payload.icon == \"01d\")\n{\n    msg.color = \"yellow\";\n}\nelse if(msg.payload.icon == \"02d\" || msg.payload.icon == \"10d\" || msg.payload.icon == \"09d\")\n{\n    msg.color = \"White\";\n}\nelse\n{\n    msg.color = \"LightGray\";\n}\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 2400,
+        "x": 580,
+        "y": 2180,
         "wires": [
             [
                 "d4254ddd3ea30a2f"
@@ -7167,8 +7148,8 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 820,
-        "y": 2400,
+        "x": 780,
+        "y": 2180,
         "wires": [
             []
         ]
@@ -7201,7 +7182,7 @@
             },
             {
                 "name": "modules power",
-                "value": "12",
+                "value": "40",
                 "type": "num"
             },
             {
@@ -7267,7 +7248,7 @@
         "repeat": "900",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": "600",
         "topic": "",
         "x": 70,
         "y": 1620,
