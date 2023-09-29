@@ -14053,26 +14053,9 @@
                 "a2861fe51ca70b20"
             ],
             [
-                "769f5c01f3e3b361",
                 "851b852090a2efde"
             ]
         ]
-    },
-    {
-        "id": "769f5c01f3e3b361",
-        "type": "debug",
-        "z": "e7a7e61768dadc02",
-        "name": "debug 16",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 880,
-        "y": 1620,
-        "wires": []
     },
     {
         "id": "23212b67673ed38e",
@@ -14086,10 +14069,11 @@
         "onceDelay": "1200",
         "topic": "",
         "x": 70,
-        "y": 1620,
+        "y": 1640,
         "wires": [
             [
-                "1c8048c9e09a07fb"
+                "1c8048c9e09a07fb",
+                "1bedf47ee49390fb"
             ]
         ]
     },
@@ -14231,27 +14215,7 @@
         "wires": [
             [],
             [
-                "94b1fb397e2d7ea0",
-                "c084d6ec61f9ed6f"
-            ]
-        ]
-    },
-    {
-        "id": "fd1fedbfcec84dd2",
-        "type": "inject",
-        "z": "e7a7e61768dadc02",
-        "name": "",
-        "props": [],
-        "repeat": "900",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1200",
-        "topic": "",
-        "x": 70,
-        "y": 1660,
-        "wires": [
-            [
-                "1bedf47ee49390fb"
+                "94b1fb397e2d7ea0"
             ]
         ]
     },
@@ -14311,22 +14275,6 @@
                 "c988a626934e6db4"
             ]
         ]
-    },
-    {
-        "id": "c084d6ec61f9ed6f",
-        "type": "debug",
-        "z": "e7a7e61768dadc02",
-        "name": "debug 20",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 1660,
-        "wires": []
     },
     {
         "id": "b1456c6040d91a11",
