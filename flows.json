@@ -5501,7 +5501,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "VSS Verbruik",
-        "func": "P = msg.payload[15] / 100;\ni1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = msg.payload[16];\np2 = msg.payload[17];\np3 = msg.payload[18];\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 13;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 63;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(P * 10) / 10;\n\n  \nreturn msg;",
+        "func": "P = msg.payload[15] / 100;\ni1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = msg.payload[16];\np2 = msg.payload[17];\np3 = msg.payload[18];\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 29;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 125;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(P * 10) / 10;\n\n  \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6322,8 +6322,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 5,
-        "x": 190,
-        "y": 1800,
+        "x": 150,
+        "y": 1780,
         "wires": [
             [
                 "d7a12d9eaf16e3d6"
@@ -6521,7 +6521,7 @@
         "type": "Bacnet-Gateway",
         "z": "e7a7e61768dadc02",
         "name": "test",
-        "local_device_address": "172.28.132.74",
+        "local_device_address": "172.28.131.186",
         "apduTimeout": 6000,
         "roundDecimal": 2,
         "local_device_port": 47808,
@@ -13978,7 +13978,7 @@
         "order": 3,
         "width": 8,
         "height": 10,
-        "format": "<style>\ntable, th, td {\n  border: 0px solid black;\n  text-align: center;\n  table-layout: fixed;\n}\nth, td {\n  padding: 0px;\n}\n.hPa-container\n{\n    position: relative;\n    /*right: 310px;*/\n    /*bottom: 40px;*/\n}\n.hPa-bar-bg \n{\n    position: relative;\n    width: 180px; /* Set the width of the rectangle */\n    height: 15px; /* Set the height of the rectangle */\n    background: linear-gradient(to right, blue, red);\n    border: 2px solid white; /* Optional border */\n    border-radius: 15px;\n    left: 5%;\n    top: 15px;\n    z-index: 1;\n}\n.hPa-bar-val \n{\n    width: 3px; /* Set the width of the rectangle */\n    height: 29px; /* Set the height of the rectangle */\n    background-color: white; /* Set the background color */\n    position: relative;\n    border-radius: 3px;\n    z-index: 2;\n    bottom: 9px;\n}\n.sunPos\n{\n    position: relative;\n}\n.sunIcon\n{\n    position: relative;\n    bottom: 25px;\n    color: yellow;\n}\n.sunBar\n{\n    position: relative;\n    width: 200px; /* Set the width of the rectangle */\n    height: 38px; /* Set the height of the rectangle */\n    background: #ffffff3d;\n    border: 2px solid white; /* Optional border */\n    top: 12px;\n    border-radius: 25px;\n    z-index: 0;\n}\n</style>\n<link rel=\"stylesheet\" href=\"/weather-icons/mycss/weather-icons.min.css\">\n<script src=\"https://kit.fontawesome.com/1d88fd5114.js\" crossorigin=\"anonymous\"></script>\n\n<table style=\"display: flex;height: 100%;justify-content: center;align-items: top; line-height: 200%;\">\n    \n<tr>\n    <th colspan=\"3\" width=\"375px\">\n        <b style=\"color: White; font-size:40px\">Weerstation VSS</b>\n    </th>\n</tr>\n\n<tr>\n    <td style=\"padding: 0px\" colspan=\"3\">\n        <b style=\"color: white; font-size:15px\">{{msg.isRain}}</b>\n    </td>\n</tr>\n<tr>\n    <td width=\"33%\">\n    </td>\n    <td width=\"34%\">\n        <b style=\"color: White; font-size:40px;\">Nu</b>\n    </td>\n    <td width=\"33%\">\n    </td>\n</tr>\n\n<tr>\n    <td>\n    </td>\n    <td>\n        <b style=\"color: white; font-size:40px;\">{{msg.temperature}}°C</b>\n    </td>\n    <td>\n    </td>\n</tr>\n<tr height=\"20px\"></tr>\n<tr style=\"color: White\">\n    <td>\n        <i class=\"fa-3x wi wi-wu- {{msg.windIcon}}\"></i>\n    </td>\n    <td>\n        <i class=\"fa-3x fa-solid fa-location-arrow\" style=\"transform: rotate({{msg.windDir}}deg)\"></i>\n    </td>\n    <td>\n        <i class=\"fa-2x wi wi-wu- wi-humidity\"></i>  \n    </td>\n</tr>\n<tr>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.windspeed}} km/u</b>\n    </td>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.windDirChar}}</b>\n    </td>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.humidity}}%</b>\n    </td>\n</tr>\n\n<tr>\n    <td >\n        \n    </td>\n    <td>\n        <b>Z</b>\n    </td>\n    <td >\n        \n    </td>\n</tr>\n<tr>\n    <td >\n        <b>W\n        <br>{{msg.lx_w}} klx</b>\n    </td>\n    <td>\n        <div class=\"sunBar\"></div>\n        <div class=\"sunPos\" style=\"left: {{msg.sunPos}}px;\">\n            <i class=\"fa-2x fa-fade wi wi-wu- wi-day-sunny sunIcon\"></i>\n        </div>\n        <b style=\"position: relative;bottom: 23px;\">{{msg.lx_z}} klx</b>\n    </td>\n    <td >\n        <b>O\n        <br>{{msg.lx_o}} klx</b>\n    </td>\n</tr>\n\n<tr>\n    <td >\n        <i class=\"fa-solid fa-gauge fa-2xl\"></i>\n    </td>\n    <td >\n        <div class=\"hPa-container\">\n            <div class=\"hPa-bar-bg\"></div>\n            <div class=\"hPa-bar-val\" style=\"left: {{msg.pressurePos}}px;\" ></div>\n        </div>\n    </td>\n    <td >\n        <b>{{msg.pressure}} hPa</b>\n    </td>\n</tr>\n\n\n</table>\n",
+        "format": "<style>\ntable, th, td {\n  border: 0px solid black;\n  text-align: center;\n  table-layout: fixed;\n}\nth, td {\n  padding: 0px;\n}\n.hPa-container\n{\n    position: relative;\n    /*right: 310px;*/\n    /*bottom: 40px;*/\n}\n.hPa-bar-bg \n{\n    position: relative;\n    width: 180px; /* Set the width of the rectangle */\n    height: 15px; /* Set the height of the rectangle */\n    background: linear-gradient(to right, blue, red);\n    border: 2px solid white; /* Optional border */\n    border-radius: 15px;\n    left: 5%;\n    top: 15px;\n    z-index: 1;\n}\n.hPa-bar-val \n{\n    width: 3px; /* Set the width of the rectangle */\n    height: 29px; /* Set the height of the rectangle */\n    background-color: white; /* Set the background color */\n    position: relative;\n    border-radius: 3px;\n    z-index: 2;\n    bottom: 9px;\n}\n.sunPos\n{\n    position: relative;\n}\n.sunIcon\n{\n    position: relative;\n    bottom: 25px;\n    color: yellow;\n}\n.sunBar\n{\n    position: relative;\n    width: 200px; /* Set the width of the rectangle */\n    height: 38px; /* Set the height of the rectangle */\n    background: #ffffff3d;\n    border: 2px solid white; /* Optional border */\n    top: 12px;\n    border-radius: 25px;\n    z-index: 0;\n}\n</style>\n<link rel=\"stylesheet\" href=\"/weather-icons/mycss/weather-icons.min.css\">\n<script src=\"https://kit.fontawesome.com/1d88fd5114.js\" crossorigin=\"anonymous\"></script>\n\n<table style=\"display: flex;height: 100%;justify-content: center;align-items: top; line-height: 200%;\">\n    \n<tr>\n    <th colspan=\"3\" width=\"375px\">\n        <b style=\"color: White; font-size:40px\">Weerstation VSS</b>\n    </th>\n</tr>\n\n<tr>\n    <td style=\"padding: 0px\" colspan=\"3\">\n        <b style=\"color: white; font-size:15px\">{{msg.isRain}}</b>\n    </td>\n</tr>\n<tr>\n    <td width=\"33%\">\n    </td>\n    <td width=\"34%\">\n        <b style=\"color: White; font-size:40px;\">Nu</b>\n    </td>\n    <td width=\"33%\">\n    </td>\n</tr>\n\n<tr>\n    <td>\n    </td>\n    <td>\n        <!--<b style=\"color: white; font-size:40px;\">{{msg.temperature}}°C</b>-->\n        <b style=\"color: white; font-size:40px;\">11°C</b>\n    </td>\n    <td>\n    </td>\n</tr>\n<tr height=\"20px\"></tr>\n<tr style=\"color: White\">\n    <td>\n        <i class=\"fa-3x wi wi-wu- {{msg.windIcon}}\"></i>\n    </td>\n    <td>\n        <i class=\"fa-3x fa-solid fa-location-arrow\" style=\"transform: rotate({{msg.windDir}}deg)\"></i>\n    </td>\n    <td>\n        <i class=\"fa-2x wi wi-wu- wi-humidity\"></i>  \n    </td>\n</tr>\n<tr>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.windspeed}} km/u</b>\n    </td>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.windDirChar}}</b>\n    </td>\n    <td >\n        <b style=\"color: White; font-size:20px;\">{{msg.humidity}}%</b>\n    </td>\n</tr>\n\n<tr>\n    <td >\n        \n    </td>\n    <td>\n        <b>Z</b>\n    </td>\n    <td >\n        \n    </td>\n</tr>\n<tr>\n    <td >\n        <b>W\n        <br>{{msg.lx_w}} klx</b>\n    </td>\n    <td>\n        <div class=\"sunBar\"></div>\n        <div class=\"sunPos\" style=\"left: {{msg.sunPos}}px;\">\n            <i class=\"fa-2x fa-fade wi wi-wu- wi-day-sunny sunIcon\"></i>\n        </div>\n        <b style=\"position: relative;bottom: 23px;\">{{msg.lx_z}} klx</b>\n    </td>\n    <td >\n        <b>O\n        <br>{{msg.lx_o}} klx</b>\n    </td>\n</tr>\n\n<tr>\n    <td >\n        <i class=\"fa-solid fa-gauge fa-2xl\"></i>\n    </td>\n    <td >\n        <div class=\"hPa-container\">\n            <div class=\"hPa-bar-bg\"></div>\n            <div class=\"hPa-bar-val\" style=\"left: {{msg.pressurePos}}px;\" ></div>\n        </div>\n    </td>\n    <td >\n        <b>{{msg.pressure}} hPa</b>\n    </td>\n</tr>\n\n\n</table>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -14053,7 +14053,8 @@
                 "a2861fe51ca70b20"
             ],
             [
-                "851b852090a2efde"
+                "851b852090a2efde",
+                "0d02bda7f128e8a1"
             ]
         ]
     },
@@ -14227,15 +14228,15 @@
         "name": "Voorspelde energieopbrengst",
         "order": 2,
         "width": "8",
-        "height": "4",
-        "format": "<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<canvas id=\"energyChart\" style=\"width:100%;max-width:600px\"></canvas>\n\n<script>\nvar energyChart;\nloadGraph();\n(function(scope) \n    {\n        scope.$watch('msg', function(msg) \n        {\n            if (msg) \n            {\n                updateGraph(msg);\n            }\n        });\n    })\n(scope);\nfunction updateGraph(msg)\n{\n    energyChart.options.scales.y.max = msg.y1max;\n    energyChart.options.scales.y1.max = msg.y2max;\n    energyChart.data.labels = msg.xValues;\n    energyChart.data.datasets[0].data = msg.yValues1;\n    energyChart.data.datasets[1].data = msg.yValues2;\n    energyChart.update();\n}\nfunction loadGraph()\n{\n    energyChart = new Chart(\"energyChart\", {\n      type: \"line\",\n      data: {\n        labels: null,\n        datasets: [{\n          label: \"Energie (kWh)\",\n          fill: false,\n          pointStyle: false,\n          backgroundColor: \"rgb(0,255,10,1)\",\n          borderColor: \"rgb(0,255,10,1)\",\n          yAxisID: 'y',\n          data: null\n        },\n        {\n          label: \"Vermogen (kW)\",\n          fill: true,\n          pointStyle: false,\n          backgroundColor: \"rgb(0,0,255,0.25)\",\n          borderColor: \"Blue\",\n          yAxisID: 'y1',\n          data: null\n        }\n        ]\n      },\n      \n      options: {\n        legend: {display: true},\n        scales: {\n          y: {\n            type: 'linear',\n            display: true,\n            position: 'left',\n            max: 70,\n          },\n          y1: {\n            type: 'linear',\n            display: true,\n            position: 'right',\n            max: 4,\n    \n            // grid line settings\n            grid: {\n              drawOnChartArea: false, // only want the grid lines for one axis to show up\n            },\n          },\n        }\n      }\n    });\n    Chart.defaults.color = \"#ffffff\"\n}\n\n</script>\n\n\n",
+        "height": "8",
+        "format": "<script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>\n<canvas id=\"energyChart\" style=\"width:100%;max-width:600px\"></canvas>\n<canvas id=\"energyChart2\" style=\"width:100%;max-width:600px\"></canvas>\n<script>\nvar energyChart;\nvar energyChart2;\nrefreshGraphs();\nconst intervalId = setInterval(refreshGraphs, 5000);\nfunction refreshGraphs()\n{\n    console.log(\"refreshing graphs\");\n    loadGraphs();\n    updateGraph(JSON.parse(localStorage.getItem(\"lastGraph\")));\n    updateGraph(JSON.parse(localStorage.getItem(\"lastGraph2\")));\n    console.log(\"refreshing graphs complete\");\n}\n(function(scope) \n    {\n        scope.$watch('msg', function(msg) \n        {\n            if (msg) \n            {\n                if(msg.graph == 1)\n                {\n                    localStorage.setItem('lastGraph', JSON.stringify(msg));\n                }\n                else if(msg.graph == 2)\n                {\n                    localStorage.setItem('lastGraph2', JSON.stringify(msg));\n                }\n                updateGraph(msg);\n            }\n        });\n    })\n(scope);\nfunction updateGraph(msg)\n{\n    if(msg.graph == 1)\n    {\n        energyChart.options.scales.y.max = msg.y1max;\n        energyChart.options.scales.y1.max = msg.y2max;\n        energyChart.data.labels = msg.xValues;\n        energyChart.data.datasets[0].data = msg.yValues1;\n        energyChart.data.datasets[1].data = msg.yValues2;\n        energyChart.update();\n    }\n    else if(msg.graph == 2)\n    {\n        energyChart2.options.scales.y.max = msg.y1max;\n        energyChart2.options.scales.y1.max = msg.y2max;\n        energyChart2.data.labels = msg.xValues;\n        energyChart2.data.datasets[0].data = msg.yValues1;\n        energyChart2.data.datasets[1].data = msg.yValues2;\n        energyChart2.update();\n    }\n\n}\nfunction loadGraphs()\n{\n    energyChart = new Chart(\"energyChart\", {\n      type: \"line\",\n      data: {\n        labels: null,\n        datasets: [{\n          label: \"Energie (kWh)\",\n          fill: false,\n          pointStyle: false,\n          backgroundColor: \"rgb(0,255,10,1)\",\n          borderColor: \"rgb(0,255,10,1)\",\n          yAxisID: 'y',\n          data: null\n        },\n        {\n          label: \"Vermogen (kW)\",\n          fill: true,\n          pointStyle: false,\n          backgroundColor: \"rgb(0,0,255,0.25)\",\n          borderColor: \"Blue\",\n          yAxisID: 'y1',\n          data: null\n        }\n        ]\n      },\n      \n      options: {\n        legend: {display: true},\n        scales: {\n          y: {\n            type: 'linear',\n            display: true,\n            position: 'right',\n            max: 70,\n          },\n          y1: {\n            type: 'linear',\n            display: true,\n            position: 'left',\n            max: 4,\n    \n            // grid line settings\n            grid: {\n              drawOnChartArea: false, // only want the grid lines for one axis to show up\n            },\n          },\n        }\n      }\n    });\n    \n    energyChart2 = new Chart(\"energyChart2\", {\n      type: \"line\",\n      data: {\n        labels: null,\n        datasets: [{\n          label: \"Energie (kWh)\",\n          fill: false,\n          pointStyle: false,\n          backgroundColor: \"rgb(0,255,10,1)\",\n          borderColor: \"rgb(0,255,10,1)\",\n          yAxisID: 'y',\n          data: null\n        },\n        {\n          label: \"Vermogen (kW)\",\n          fill: true,\n          pointStyle: false,\n          backgroundColor: \"rgb(0,0,255,0.25)\",\n          borderColor: \"Blue\",\n          yAxisID: 'y1',\n          data: null\n        }\n        ]\n      },\n      \n      options: {\n        legend: {display: true},\n        scales: {\n          y: {\n            type: 'linear',\n            display: true,\n            position: 'right',\n            max: 70,\n          },\n          y1: {\n            type: 'linear',\n            display: true,\n            position: 'left',\n            max: 4,\n    \n            // grid line settings\n            grid: {\n              drawOnChartArea: false, // only want the grid lines for one axis to show up\n            },\n          },\n        }\n      }\n    });\n    Chart.defaults.color = \"#ffffff\";\n}\n\n</script>\n</body>\n\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 820,
-        "y": 1620,
+        "x": 860,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -14245,7 +14246,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "saveData",
-        "func": "global.set(\"powerCurve\", msg.payload[0].data[0]);\nreturn msg;",
+        "func": "global.set(\"powerCurve\", msg.payload[0].data[0]);\nglobal.set(\"powerCurve2\", msg.payload[0].data[1]);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14262,7 +14263,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "fillGraph",
-        "func": "msg.payload[0].labels.pop();\nmsg.xValues = msg.payload[0].labels;\nmsg.yValues1 = msg.payload[0].data[0];\nmsg.yValues2 = global.get(\"powerCurve\");\n\nmsg.y1max = Math.round(Math.max.apply(null, msg.yValues1) * 1.1);\nmsg.y2max = Math.round(Math.max.apply(null, msg.yValues2) * 1.1);\nreturn msg;",
+        "func": "msg.payload[0].labels.pop();\nmsg.xValues = msg.payload[0].labels;\nmsg.yValues1 = msg.payload[0].data[0];\nmsg.yValues2 = global.get(\"powerCurve\");\nmsg.graph = 1;\n\n\nmsg.y1max = Math.round(Math.max.apply(null, msg.yValues1) * 1.1);\nmsg.y2max = Math.round(Math.max.apply(null, msg.yValues2) * 1.1);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -14272,7 +14273,8 @@
         "y": 1620,
         "wires": [
             [
-                "c988a626934e6db4"
+                "c988a626934e6db4",
+                "c64acc0b600122a3"
             ]
         ]
     },
@@ -14300,6 +14302,60 @@
                 "1c8048c9e09a07fb"
             ]
         ]
+    },
+    {
+        "id": "0d02bda7f128e8a1",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "fillGraph",
+        "func": "msg.payload[0].labels.pop();\nmsg.xValues = msg.payload[0].labels;\nmsg.yValues1 = msg.payload[0].data[1];\nmsg.yValues2 = global.get(\"powerCurve2\");\nmsg.graph = 2;\n\n\nmsg.y1max = Math.round(Math.max.apply(null, msg.yValues1) * 1.1);\nmsg.y2max = Math.round(Math.max.apply(null, msg.yValues2) * 1.1);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1700,
+        "wires": [
+            [
+                "36b496b90d3f3f12",
+                "c988a626934e6db4"
+            ]
+        ]
+    },
+    {
+        "id": "36b496b90d3f3f12",
+        "type": "debug",
+        "z": "e7a7e61768dadc02",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "c64acc0b600122a3",
+        "type": "debug",
+        "z": "e7a7e61768dadc02",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1620,
+        "wires": []
     },
     {
         "id": "b1456c6040d91a11",
