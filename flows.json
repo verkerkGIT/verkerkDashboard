@@ -1636,6 +1636,32 @@
         "className": ""
     },
     {
+        "id": "aef2f784e90923a8",
+        "type": "modbus-client",
+        "name": "VSS PV",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": false,
+        "tcpHost": "192.168.94.8",
+        "tcpPort": "502",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "serialAsciiResponseStartDelimiter": "0x3A",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
         "id": "5eb0bd6b.74b794",
         "type": "function",
         "z": "2924702c.b33a7",
@@ -3863,7 +3889,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Save history data",
-        "func": "const d = new Date();\nyear = d.getFullYear().toString();\nmonth = (d.getMonth() + 1).toString().padStart(2, '0');\nday = d.getDate().toString().padStart(2, '0');\nhour = d.getHours();\nminute = d.getMinutes();\nsecond = d.getSeconds();\nmsg.topic = \"node-red_energylogs/\" + (day + \"-\" + month + \"-\" + year) + \".log\"; //global.get(\"defaultFolder\") + \n\nif(hour == 0 && minute == 0 && second < 15)\n{\n    global.set(\"historySave\", {});\n    global.set(\"counter\", 0);\n    global.set(\"totalEnergy\", 0);\n    global.set(\"koffieCounter\", 0);\n}\n\nloadedData = global.get(\"loadedData\");\nif(typeof(loadedData) == \"undefined\")\n{\n    loadedData = [];\n}\nfor(i = 0; i < loadedData.length; i++)\n{\n    if(loadedData[i].filePath == msg.topic)\n    {\n        loadedData.splice(i, 1);\n    }\n}\nloadedData.push({filePath : msg.topic, data : msg.payload})\nglobal.set(\"loadedData\", loadedData);\nreturn msg;",
+        "func": "const d = new Date();\nyear = d.getFullYear().toString();\nmonth = (d.getMonth() + 1).toString().padStart(2, '0');\nday = d.getDate().toString().padStart(2, '0');\nhour = d.getHours();\nminute = d.getMinutes();\nsecond = d.getSeconds();\nmsg.topic = \"node-red_energylogs/\" + (day + \"-\" + month + \"-\" + year) + \".log\"; //global.get(\"defaultFolder\") + \n\nif(hour == 0 && minute == 0 && second < 15)\n{\n    global.set(\"historySave\", {});\n    global.set(\"counter\", 0);\n    global.set(\"totalEnergy\", 0);\n    global.set(\"totalEnergyProduced\", 0);\n    global.set(\"koffieCounter\", 0);\n}\n\nloadedData = global.get(\"loadedData\");\nif(typeof(loadedData) == \"undefined\")\n{\n    loadedData = [];\n}\nfor(i = 0; i < loadedData.length; i++)\n{\n    if(loadedData[i].filePath == msg.topic)\n    {\n        loadedData.splice(i, 1);\n    }\n}\nloadedData.push({filePath : msg.topic, data : msg.payload})\nglobal.set(\"loadedData\", loadedData);\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4143,60 +4169,6 @@
         ]
     },
     {
-        "id": "bfdc7805aa8b1ad3",
-        "type": "debug",
-        "z": "e7a7e61768dadc02",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1640,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "ca84ce2ae8a28247",
-        "type": "function",
-        "z": "e7a7e61768dadc02",
-        "name": "function 2",
-        "func": "//msg.payload = (global.get(\"hourlyData\"));\n//msg.payload = (global.get(\"HistorySave\"));\n//msg.payload = global.get(\"Kastnaam\");\n//msg.payload = (global.get(\"lastHour\"));\n//msg.payload = global.set(\"totalEnergy\", 0);\n//msg.payload = global.set(\"loadedData\", []);\n//msg.payload = global.set(\"koffieCounter\", 0);\n//msg.payload = global.get(\"KastNaam\");\n//msg.payload = global.get(\"latestJSON\");\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1500,
-        "y": 1000,
-        "wires": [
-            [
-                "bfdc7805aa8b1ad3"
-            ]
-        ]
-    },
-    {
-        "id": "f695fdff06b483f9",
-        "type": "inject",
-        "z": "e7a7e61768dadc02",
-        "name": "Initialise history",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 1340,
-        "y": 1000,
-        "wires": [
-            [
-                "ca84ce2ae8a28247"
-            ]
-        ]
-    },
-    {
         "id": "bf45c2b5e36d54f6",
         "type": "function",
         "z": "e7a7e61768dadc02",
@@ -4285,7 +4257,7 @@
         "finalize": "",
         "libs": [],
         "x": 450,
-        "y": 1180,
+        "y": 1120,
         "wires": [
             [
                 "a7b3b1856b93635d",
@@ -4298,7 +4270,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "TotalPower",
-        "func": "i1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = msg.payload[16];\np2 = msg.payload[17];\np3 = msg.payload[18];\n\nenergy = msg.payload[44];\nif (energy < 50)\n{\n    global.set(\"oldEnergy\", 0);\n}\nenergy_dx = energy - (global.get(\"oldEnergy\") || 0);\nglobal.set(\"oldEnergy\", energy);\nglobal.set(\"totalEnergy\", (global.get(\"totalEnergy\")||0) + energy_dx);\nconsole.log(energy);\n\n\nPower = msg.payload[15] / 100;\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 80;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 400;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(Power * 10) / 10;\nmsg.debug = energy;\nreturn msg;",
+        "func": "i1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = msg.payload[16];\np2 = msg.payload[17];\np3 = msg.payload[18];\n\nenergy = msg.payload[44];\nif (energy < 50)\n{\n    global.set(\"oldEnergy\", 0);\n}\nenergy_dx = energy - (global.get(\"oldEnergy\") || 0);\nglobal.set(\"oldEnergy\", energy);\nglobal.set(\"totalEnergy\", (global.get(\"totalEnergy\")||0) + energy_dx);\n\n\n\nPower = msg.payload[15] / 100;\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 80;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 400;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(Power * 10) / 10;\nmsg.debug = energy;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4443,7 +4415,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Meterkast_KK_LK_Totaal",
-        "func": "msg.payload = \n{\n   'address' : '36866', \n   'quantity': '120'\n}\nmsg.topic = \"Meterkast_KK_LK\";\nreturn msg;",
+        "func": "msg.payload = \n{\n   'address' : '36866', \n   'quantity': '120'\n}\nmsg.topic = \"Meterkast VBT\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4462,7 +4434,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Regelkast_RK1_Totaal",
-        "func": "msg.payload = \n{\n   'address' : '36866', \n   'quantity': '120',\n}\nmsg.topic = \"Regelkast_RK1\";\nreturn msg;",
+        "func": "msg.payload = \n{\n   'address' : '36866', \n   'quantity': '120',\n}\nmsg.topic = \"Regelkast VBT\";\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4488,7 +4460,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 110,
-        "y": 760,
+        "y": 740,
         "wires": [
             [
                 "bf45c2b5e36d54f6",
@@ -4498,7 +4470,8 @@
                 "a3b3ecf58da0c660",
                 "646b3012069be12b",
                 "e2ad94c9b826fad7",
-                "1c23db13a19fc676"
+                "1c23db13a19fc676",
+                "553b3fd3156ed93c"
             ]
         ]
     },
@@ -4526,7 +4499,7 @@
         "seg2": "",
         "className": "",
         "x": 770,
-        "y": 1180,
+        "y": 1120,
         "wires": []
     },
     {
@@ -4541,7 +4514,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 1220,
+        "y": 1160,
         "wires": [
             [
                 "d43deaf5b47aae66",
@@ -4573,7 +4546,7 @@
         "seg2": "",
         "className": "",
         "x": 770,
-        "y": 1220,
+        "y": 1160,
         "wires": []
     },
     {
@@ -4884,7 +4857,7 @@
         "order": 1,
         "width": 8,
         "height": 2,
-        "format": "<script src=\"https://kit.fontawesome.com/1d88fd5114.js\" crossorigin=\"anonymous\"></script>\n\n<table>\n<tr>\n    <th>\n        <i class=\"fa-solid fa-sun fa-beat-fade\"></i>\n    </th>\n    <th>\n        <b>Energie opgewekt vandaag:</b>\n    </th>\n    <th>\n        <b>0.00 kWh</b>\n    </th>\n</tr>\n<tr>\n    <td>\n        <i class=\"fa-solid fa-bolt fa-beat-fade\"></i>\n    </td>\n    <td>\n        <b>Energie verbruikt vandaag:</b>\n    </td>\n    <td>\n        <b>{{msg.totalEnergy}} kWh</b>\n    </td>\n</tr>\n<tr>\n    <td>\n        <i class=\"fa-solid fa-coins\"></i>\n    </td>\n    <td>\n        <b>Energiekosten vandaag:</b>\n    </td>\n    <td>\n        <b>€ {{msg.totalCost}}</b>\n    </td>\n</tr>\n\n<tr>\n    <th>\n        <i class=\"fa-solid fa-sun fa-beat-fade\"></i>\n    </th>\n    <th>\n        <b>Energie voorspeld vandaag:</b>\n    </th>\n    <th>\n        <b>{{msg.solartoday}} kWh</b>\n    </th>\n</tr>\n</table>\n",
+        "format": "<script src=\"https://kit.fontawesome.com/1d88fd5114.js\" crossorigin=\"anonymous\"></script>\n\n<table>\n<tr>\n    <th>\n        <i class=\"fa-solid fa-sun fa-beat-fade\"></i>\n    </th>\n    <th>\n        <b>Energie opgewekt vandaag:</b>\n    </th>\n    <th>\n        <b>{{msg.totalEnergyProduced}} kWh</b>\n    </th>\n</tr>\n<tr>\n    <td>\n        <i class=\"fa-solid fa-bolt fa-beat-fade\"></i>\n    </td>\n    <td>\n        <b>Energie verbruikt vandaag:</b>\n    </td>\n    <td>\n        <b>{{msg.totalEnergy}} kWh</b>\n    </td>\n</tr>\n<tr>\n    <td>\n        <i class=\"fa-solid fa-coins\"></i>\n    </td>\n    <td>\n        <b>Energiekosten vandaag:</b>\n    </td>\n    <td>\n        <b>€ {{msg.totalCost}}</b>\n    </td>\n</tr>\n\n<tr>\n    <th>\n        <i class=\"fa-solid fa-sun fa-beat-fade\"></i>\n    </th>\n    <th>\n        <b>Energie voorspeld vandaag:</b>\n    </th>\n    <th>\n        <b>{{msg.solartoday}} kWh</b>\n    </th>\n</tr>\n</table>\n",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": false,
@@ -4901,7 +4874,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "Energy",
-        "func": "msg.totalEnergy = (Math.round(global.get(\"totalEnergy\") * 10) / 10000).toFixed(2);\nmsg.totalCost = (msg.totalEnergy * 0.5).toFixed(2);\nmsg.solartoday = Math.round(global.get(\"solarpredictiontoday\") / 100) / 10;\nreturn msg;",
+        "func": "msg.totalEnergy = (Math.round(global.get(\"totalEnergy\") * 10) / 10000).toFixed(2);\nmsg.totalEnergyProduced = (Math.round(global.get(\"totalEnergyProduced\") * 10) / 10000).toFixed(2);\nmsg.totalCost = ((msg.totalEnergy - msg.totalEnergyProduced) * 0.25).toFixed(2);\nmsg.solartoday = Math.round(global.get(\"solarpredictiontoday\") / 100) / 10;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5501,7 +5474,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "VSS Verbruik",
-        "func": "P = msg.payload[15] / 100;\ni1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = msg.payload[16];\np2 = msg.payload[17];\np3 = msg.payload[18];\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 29;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 125;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(P * 10) / 10;\n\n  \nreturn msg;",
+        "func": "P = msg.payload[15] / 100;\ni1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = msg.payload[16];\np2 = msg.payload[17];\np3 = msg.payload[18];\n\n//check sign\nif(p1 > 32768)\n{\n    p1 = -(65535 - p1);\n}\nif(p2 > 32768)\n{\n   p2 = -(65535 - p2);\n}\nif(p3 > 32768)\n{\n    p3 = -(65535 - p3);\n}\n\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 29;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 125;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(P * 10) / 10;\n\n  \nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5528,7 +5501,7 @@
         "finalize": "",
         "libs": [],
         "x": 630,
-        "y": 1160,
+        "y": 1100,
         "wires": [
             [
                 "5e69d39be937b2ac"
@@ -5547,7 +5520,7 @@
         "finalize": "",
         "libs": [],
         "x": 630,
-        "y": 1240,
+        "y": 1180,
         "wires": [
             [
                 "d3bbc463469c9b35"
@@ -5559,7 +5532,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "ProcessData",
-        "func": "max = msg.max;\nif(msg.L1v > max)\n{\n    msg.L1v = max;\n}\nif(msg.L2v > max)\n{\n    msg.L2v = max;\n}\nif(msg.L3v > max)\n{\n    msg.L3v = max;\n}\npercentage1 = Math.round((msg.L1v/max) * 100);\npercentage2 = Math.round((msg.L2v/max) * 100);\npercentage3 = Math.round((msg.L3v/max) * 100);\nmsg.L1p = percentage1;\nmsg.L2p = percentage2;\nmsg.L3p = percentage3;\ncolour = [];\ncolour[0] = getcolor(percentage1);\ncolour[1] = getcolor(percentage2);\ncolour[2] = getcolor(percentage3);\nmsg.color = colour;\nfunction lerpColor(a, b, amount) \n    {\n        var ah = parseInt(a.replace(/#/g, ''), 16),\n        ar = ah >> 16, ag = ah >> 8 & 0xff, ab = ah & 0xff,\n        bh = parseInt(b.replace(/#/g, ''), 16),\n        br = bh >> 16, bg = bh >> 8 & 0xff, bb = bh & 0xff,\n        rr = ar + amount * (br - ar),\n        rg = ag + amount * (bg - ag),\n        rb = ab + amount * (bb - ab);\n        return (\"#\" + ((1 << 24) + (rr << 16) + (rg << 8) + rb).toString(16).slice(1)).slice(0, 7);\n    }\n  \n  function getcolor(value) \n  {\n    var percentage = parseFloat(value);\n    var color;\n    if (percentage < 50) {\n      amount = percentage / 50;\n      color = lerpColor(\"#00b500\", \"#e6e600\", amount);\n    } else {\n      amount = (percentage - 50) / 50;\n      color = lerpColor(\"#e6e600\", \"#ca3838\", amount);\n    }\n    return color;\n  }\nreturn msg;",
+        "func": "max = msg.max;\nif(msg.L1v > max)\n{\n    msg.L1v = max;\n}\nif(msg.L2v > max)\n{\n    msg.L2v = max;\n}\nif(msg.L3v > max)\n{\n    msg.L3v = max;\n}\n\n\npercentage1 = Math.round((Math.abs(msg.L1v)/max) * 100);\npercentage2 = Math.round((Math.abs(msg.L2v)/max) * 100);\npercentage3 = Math.round((Math.abs(msg.L3v)/max) * 100);\nmsg.L1p = percentage1;\nmsg.L2p = percentage2;\nmsg.L3p = percentage3;\n\nif(Math.sign(msg.L1v) == -1)\n{\n   msg.L1p_b = 50 - percentage1; \n}\nif(Math.sign(msg.L2v) == -1)\n{\n    msg.L2p_b = 50 - percentage2;\n}\nif(Math.sign(msg.L3v) == -1)\n{\n    msg.L3p_b = 50 - percentage3;\n}\n\ncolour = [];\ncolour[0] = getcolor(percentage1);\ncolour[1] = getcolor(percentage2);\ncolour[2] = getcolor(percentage3);\nmsg.color = colour;\nfunction lerpColor(a, b, amount) \n    {\n        var ah = parseInt(a.replace(/#/g, ''), 16),\n        ar = ah >> 16, ag = ah >> 8 & 0xff, ab = ah & 0xff,\n        bh = parseInt(b.replace(/#/g, ''), 16),\n        br = bh >> 16, bg = bh >> 8 & 0xff, bb = bh & 0xff,\n        rr = ar + amount * (br - ar),\n        rg = ag + amount * (bg - ag),\n        rb = ab + amount * (bb - ab);\n        return (\"#\" + ((1 << 24) + (rr << 16) + (rg << 8) + rb).toString(16).slice(1)).slice(0, 7);\n    }\n  \n  function getcolor(value) \n  {\n    var percentage = parseFloat(value);\n    var color;\n    if (percentage < 50) {\n      amount = percentage / 50;\n      color = lerpColor(\"#00b500\", \"#e6e600\", amount);\n    } else {\n      amount = (percentage - 50) / 50;\n      color = lerpColor(\"#e6e600\", \"#ca3838\", amount);\n    }\n    return color;\n  }\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5569,7 +5542,7 @@
         "y": 1380,
         "wires": [
             [
-                "c9129fa52923914d"
+                "c8fe412bbf36f1e7"
             ]
         ]
     },
@@ -5590,27 +5563,6 @@
             [
                 "b091618ea71ce95b"
             ]
-        ]
-    },
-    {
-        "id": "c9129fa52923914d",
-        "type": "ui_template",
-        "z": "e7a7e61768dadc02",
-        "group": "07da38dabb79ce59",
-        "name": "Bar chart",
-        "order": 3,
-        "width": 8,
-        "height": 5,
-        "format": "<style>\n.title\n{\n    display: flex;\n    justify-content: center;\n    font-weight: bold;\n    font-size: 22px;\n}\n.mainchart\n{\n    display: flex;\n    justify-content: center;\n    position: relative;\n    height: 100%;\n}\n.barchart {\n  display: flex;\n  position: relative;\n  align-items: flex-end;\n  height: 100%;\n  background-color: transparent;\n}\n\n.bar {\n    position: relative;\n    width: 60px;\n    transition: height 0.5s ease-out;\n    z-index: 3;\n    margin-right: 10px;\n}\n.greybar{\n    position: absolute;\n    z-index: 2;\n    width: 60px;\n    height: 100%;\n    background-color: #7f7f7f;\n    margin-right: 10px;\n    opacity: 0.5;\n}\n.greybar:nth-of-type(4) {\n    transform: translateX(0px);\n}\n.greybar:nth-of-type(5) {\n    transform: translateX(70px);\n}\n.greybar:nth-of-type(6) {\n    transform: translateX(140px);\n}\n.bar:last-child {\n    margin-right: 0;\n}\n\n.bar::after {\n    content: attr(data-value);\n    display: block;\n    text-align: center;\n    font-weight: bold;\n    margin-top: -20px !important;\n}\n\n.labels {\n    display: flex;\n    justify-content: center;\n    margin-top: 2px;\n}\n\n.labels span {\n    width: 70px;\n    text-align: center;\n    font-weight: bold;\n}\n</style>\n\n<html>\n<div class=\"title\">{{msg.topic}}</div>\n<div class=\"mainchart\">\n  <div class=\"barchart\">\n    <div class=\"bar\" data-value=\"{{msg.L1v}}{{msg.unit}}\" style=\"height: {{msg.L1p}}%; background-color:{{msg.color[0]}}\"></div>\n    <div class=\"bar\" data-value=\"{{msg.L2v}}{{msg.unit}}\" style=\"height: {{msg.L2p}}%; background-color:{{msg.color[1]}}\"></div>\n    <div class=\"bar\" data-value=\"{{msg.L3v}}{{msg.unit}}\" style=\"height: {{msg.L3p}}%; background-color:{{msg.color[2]}}\"></div>\n    \n    <div class=\"greybar\"></div>\n    <div class=\"greybar\"></div>\n    <div class=\"greybar\"></div>\n </div>\n</div>\n\n<div class=\"labels\">\n  <span>L1</span>\n  <span>L2</span>\n  <span>L3</span>\n</div>\n\n</html>\n\n",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 960,
-        "y": 1380,
-        "wires": [
-            []
         ]
     },
     {
@@ -5650,7 +5602,7 @@
         "templateScope": "local",
         "className": "",
         "x": 780,
-        "y": 1140,
+        "y": 1080,
         "wires": [
             []
         ]
@@ -5671,7 +5623,7 @@
         "templateScope": "local",
         "className": "",
         "x": 780,
-        "y": 1260,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -14112,7 +14064,7 @@
         ],
         "uncaught": false,
         "x": 110,
-        "y": 900,
+        "y": 960,
         "wires": [
             [
                 "07a9a9553ae6d4b3"
@@ -14132,7 +14084,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 520,
-        "y": 900,
+        "y": 960,
         "wires": []
     },
     {
@@ -14153,7 +14105,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 280,
-        "y": 900,
+        "y": 960,
         "wires": [
             [
                 "e1f1440c72f73336"
@@ -14356,6 +14308,174 @@
         "x": 800,
         "y": 1620,
         "wires": []
+    },
+    {
+        "id": "553b3fd3156ed93c",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "VSS PV",
+        "func": "msg.payload = \n{\n   'address' : '40072', \n   'quantity': '80',\n}\nmsg.topic = \"Zonnepanelen\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 900,
+        "wires": [
+            [
+                "9041d5f8ec45ac2e"
+            ]
+        ]
+    },
+    {
+        "id": "9041d5f8ec45ac2e",
+        "type": "modbus-flex-getter",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "aef2f784e90923a8",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 550,
+        "y": 900,
+        "wires": [
+            [
+                "50927bd05a4a4c06",
+                "a7958faae1c2da19"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "50927bd05a4a4c06",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "PV power",
+        "func": "P = (65535 - msg.payload[15]) / 100;\ni1 = msg.payload[0];\ni2 = msg.payload[1];\ni3 = msg.payload[2];\np1 = 65535 - msg.payload[16]; //Inverse sign since power is generated\np2 = 65535 - msg.payload[17];\np3 = 65535 - msg.payload[18];\n\nenergy = msg.payload[36];\nif (energy < 50)\n{\n    global.set(\"oldEnergyProduced\", 0);\n}\nenergy_dx = energy - (global.get(\"oldEnergyProduced\") || 0);\nglobal.set(\"oldEnergyProduced\", energy);\nglobal.set(\"totalEnergyProduced\", (global.get(\"totalEnergyProduced\")||0) + energy_dx);\n\nif(global.get(\"showPower\"))\n{\n    msg.unit = \"kW\";\n    msg.max = 29;\n    msg.L1v = Math.round(p1 / 10) / 10;\n    msg.L2v = Math.round(p2 / 10) / 10;\n    msg.L3v = Math.round(p3 / 10) / 10;\n}\nelse\n{\n    msg.unit = \"A\";\n    msg.max = 125;\n    msg.L1v = Math.round(i1 / 10) / 10;\n    msg.L2v = Math.round(i2 / 10) / 10;\n    msg.L3v = Math.round(i3 / 10) / 10;\n}\nmsg.payload = Math.round(P * 10) / 10;\n\n  \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1300,
+        "wires": [
+            [
+                "1e91cdb7b9be194b",
+                "57daab7ecd20e589"
+            ]
+        ]
+    },
+    {
+        "id": "1e91cdb7b9be194b",
+        "type": "ui_gauge",
+        "z": "e7a7e61768dadc02",
+        "name": "",
+        "group": "4c7a2afe4e5b67d1",
+        "order": 1,
+        "width": 8,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Totaal Opwekking",
+        "label": "kW",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "240",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 650,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "57daab7ecd20e589",
+        "type": "function",
+        "z": "e7a7e61768dadc02",
+        "name": "ProcessData",
+        "func": "max = msg.max;\nif(msg.L1v > max)\n{\n    msg.L1v = max;\n}\nif(msg.L2v > max)\n{\n    msg.L2v = max;\n}\nif(msg.L3v > max)\n{\n    msg.L3v = max;\n}\npercentage1 = Math.round((msg.L1v/max) * 100);\npercentage2 = Math.round((msg.L2v/max) * 100);\npercentage3 = Math.round((msg.L3v/max) * 100);\nmsg.L1p = percentage1;\nmsg.L2p = percentage2;\nmsg.L3p = percentage3;\ncolour = [];\ncolour[0] = getcolor(percentage1);\ncolour[1] = getcolor(percentage2);\ncolour[2] = getcolor(percentage3);\nmsg.color = colour;\nfunction lerpColor(a, b, amount) \n    {\n        var ah = parseInt(a.replace(/#/g, ''), 16),\n        ar = ah >> 16, ag = ah >> 8 & 0xff, ab = ah & 0xff,\n        bh = parseInt(b.replace(/#/g, ''), 16),\n        br = bh >> 16, bg = bh >> 8 & 0xff, bb = bh & 0xff,\n        rr = ar + amount * (br - ar),\n        rg = ag + amount * (bg - ag),\n        rb = ab + amount * (bb - ab);\n        return (\"#\" + ((1 << 24) + (rr << 16) + (rg << 8) + rb).toString(16).slice(1)).slice(0, 7);\n    }\n  \n  function getcolor(value) \n  {\n    var percentage = parseFloat(value);\n    var color;\n    if (percentage < 50) {\n      amount = percentage / 50;\n      color = lerpColor(\"#00b500\", \"#e6e600\", amount);\n    } else {\n      amount = (percentage - 50) / 50;\n      color = lerpColor(\"#e6e600\", \"#ca3838\", amount);\n    }\n    return color;\n  }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 1300,
+        "wires": [
+            [
+                "b5b6f9836b3ccd81"
+            ]
+        ]
+    },
+    {
+        "id": "b5b6f9836b3ccd81",
+        "type": "ui_template",
+        "z": "e7a7e61768dadc02",
+        "group": "07da38dabb79ce59",
+        "name": "Bar chart",
+        "order": 2,
+        "width": 8,
+        "height": 5,
+        "format": "<style>\n.title\n{\n    display: flex;\n    justify-content: center;\n    font-weight: bold;\n    font-size: 22px;\n}\n.mainchart\n{\n    display: flex;\n    justify-content: center;\n    position: relative;\n    height: 100%;\n}\n.barchart {\n  display: flex;\n  position: relative;\n  align-items: flex-end;\n  height: 100%;\n  background-color: transparent;\n}\n\n.bar {\n    position: relative;\n    width: 60px;\n    transition: height 0.5s ease-out;\n    z-index: 3;\n    margin-right: 10px;\n}\n.greybar{\n    position: absolute;\n    z-index: 2;\n    width: 60px;\n    height: 100%;\n    background-color: #7f7f7f;\n    margin-right: 10px;\n    opacity: 0.5;\n}\n.greybar:nth-of-type(4) {\n    transform: translateX(0px);\n}\n.greybar:nth-of-type(5) {\n    transform: translateX(70px);\n}\n.greybar:nth-of-type(6) {\n    transform: translateX(140px);\n}\n.bar:last-child {\n    margin-right: 0;\n}\n\n.bar::after {\n    content: attr(data-value);\n    display: block;\n    text-align: center;\n    font-weight: bold;\n    margin-top: -20px !important;\n}\n\n.labels {\n    display: flex;\n    justify-content: center;\n    margin-top: 2px;\n}\n\n.labels span {\n    width: 70px;\n    text-align: center;\n    font-weight: bold;\n}\n</style>\n\n<html>\n<div class=\"title\">{{msg.topic}}</div>\n<div class=\"mainchart\">\n  <div class=\"barchart\">\n    <div class=\"bar\" data-value=\"{{msg.L1v}}{{msg.unit}}\" style=\"height: {{msg.L1p}}%; background-color:{{msg.color[0]}}\"></div>\n    <div class=\"bar\" data-value=\"{{msg.L2v}}{{msg.unit}}\" style=\"height: {{msg.L2p}}%; background-color:{{msg.color[1]}}\"></div>\n    <div class=\"bar\" data-value=\"{{msg.L3v}}{{msg.unit}}\" style=\"height: {{msg.L3p}}%; background-color:{{msg.color[2]}}\"></div>\n    \n    <div class=\"greybar\"></div>\n    <div class=\"greybar\"></div>\n    <div class=\"greybar\"></div>\n </div>\n</div>\n\n<div class=\"labels\">\n  <span>L1</span>\n  <span>L2</span>\n  <span>L3</span>\n</div>\n\n</html>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 980,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a7958faae1c2da19",
+        "type": "debug",
+        "z": "e7a7e61768dadc02",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "c8fe412bbf36f1e7",
+        "type": "ui_template",
+        "z": "e7a7e61768dadc02",
+        "group": "07da38dabb79ce59",
+        "name": "Bar chart",
+        "order": 3,
+        "width": 8,
+        "height": 5,
+        "format": "<style>\n.title\n{\n    display: flex;\n    justify-content: center;\n    font-weight: bold;\n    font-size: 22px;\n}\n.mainchart\n{\n    display: flex;\n    justify-content: center;\n    position: relative;\n    height: 100%;\n}\n.barchart {\n  display: flex;\n  position: relative;\n  align-items: flex-end;\n  height: 100%;\n  background-color: transparent;\n}\n\n.signedbar {\n    position: relative;\n    width: 60px;\n    bottom: 50%;\n    transition: height 0.5s ease-out;\n    z-index: 3;\n    margin-right: 10px;\n}\n.zerobar {\n    position: absolute;\n    width: 200px;\n    bottom: 49%;\n    height: 3px;\n    background-color: black;\n    opacity: 0.7;\n}\n.greybar{\n    position: absolute;\n    z-index: 2;\n    width: 60px;\n    height: 100%;\n    background-color: #7f7f7f;\n    margin-right: 10px;\n    opacity: 0.5;\n}\n.greybar:nth-of-type(4) {\n    transform: translateX(0px);\n}\n.greybar:nth-of-type(5) {\n    transform: translateX(70px);\n}\n.greybar:nth-of-type(6) {\n    transform: translateX(140px);\n}\n.bar:last-child {\n    margin-right: 0;\n}\n\n.signedbar::after {\n    content: attr(data-value);\n    display: block;\n    text-align: center;\n    font-weight: bold;\n    margin-top: -20px !important;\n}\n\n.labels {\n    display: flex;\n    justify-content: center;\n    margin-top: 2px;\n}\n\n.labels span {\n    width: 70px;\n    text-align: center;\n    font-weight: bold;\n}\n.plugSymbol {\n    position: relative;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.ECOSymbol {\n    position: relative;\n    display: flex;\n    top: 85%;\n    justify-content: center;\n    align-items: center;\n}\n</style>\n\n<html>\n<div class=\"title\">{{msg.topic}}</div>\n<div class=\"mainchart\">\n  <div class=\"barchart\">\n      \n    <div class=\"signedbar\" data-value=\"{{msg.L1v}}{{msg.unit}}\" style=\"height: {{msg.L1p}}%; background-color:{{msg.color[0]}}; bottom: {{msg.L1p_b}}%\"></div>\n    <div class=\"signedbar\" data-value=\"{{msg.L2v}}{{msg.unit}}\" style=\"height: {{msg.L2p}}%; background-color:{{msg.color[1]}}; bottom: {{msg.L2p_b}}%\"></div>\n    <div class=\"signedbar\" data-value=\"{{msg.L3v}}{{msg.unit}}\" style=\"height: {{msg.L3p}}%; background-color:{{msg.color[2]}}; bottom: {{msg.L3p_b}}%\"></div>\n    \n    <div class=\"zerobar\"></div>\n\n    <div class=\"greybar\"> <div class=\"ECOSymbol\"><i class=\"fa-regular fa-sun\"></i></div><div class=\"plugSymbol\"><i class=\"fa-solid fa-plug\"></i></div></div>\n    <div class=\"greybar\"> <div class=\"ECOSymbol\"><i class=\"fa-regular fa-sun\"></i></div><div class=\"plugSymbol\"><i class=\"fa-solid fa-plug\"></i></div></div>\n    <div class=\"greybar\"> <div class=\"ECOSymbol\"><i class=\"fa-regular fa-sun\"></i></div><div class=\"plugSymbol\"><i class=\"fa-solid fa-plug\"></i></div></div>\n </div>\n</div>\n\n<div class=\"labels\">\n  <span>L1</span>\n  <span>L2</span>\n  <span>L3</span>\n</div>\n\n</html>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 1380,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "b1456c6040d91a11",
