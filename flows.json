@@ -14067,7 +14067,8 @@
         "y": 1620,
         "wires": [
             [
-                "a2861fe51ca70b20"
+                "a2861fe51ca70b20",
+                "73a24d732d34319a"
             ],
             [
                 "851b852090a2efde",
@@ -14100,7 +14101,7 @@
         "type": "function",
         "z": "e7a7e61768dadc02",
         "name": "TotalEnergy",
-        "func": "const keys = Object.keys(msg.payload.result);\n\nglobal.set(\"solarpredictiontoday\", msg.payload.result[keys[13]]);\nreturn msg;",
+        "func": "const data = msg.payload.result;\n\n// Step 1: Parse keys (timestamps)\nconst timestamps = Object.keys(data);\n\n// Step 2: Find maximum timestamp (last hour of the day)\nconst today = timestamps[0].slice(timestamps[0].lastIndexOf(\"-\") + 1, timestamps[0].indexOf(\" \"));\n\nconst timestamps_today = timestamps.filter(timestamp => { return timestamp.slice(timestamps[0].lastIndexOf(\"-\") + 1, timestamps[0].indexOf(\" \")) == today});\nconst lastHourValue = data[timestamps_today[timestamps_today.length - 1]];\n\nglobal.set(\"solarpredictiontoday\", lastHourValue);\nmsg.payload = lastHourValue;\nreturn msg;\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -14689,6 +14690,23 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "73a24d732d34319a",
+        "type": "debug",
+        "z": "e7a7e61768dadc02",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 1740,
+        "wires": []
     },
     {
         "id": "b1456c6040d91a11",
