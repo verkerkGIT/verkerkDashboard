@@ -14025,17 +14025,17 @@
             },
             {
                 "name": "declination",
-                "value": "30",
+                "value": "10",
                 "type": "num"
             },
             {
                 "name": "azimuth",
-                "value": "40",
+                "value": "322",
                 "type": "num"
             },
             {
                 "name": "modules power",
-                "value": "100",
+                "value": "34",
                 "type": "num"
             },
             {
@@ -14196,17 +14196,17 @@
             },
             {
                 "name": "declination",
-                "value": "30",
+                "value": "10",
                 "type": "num"
             },
             {
                 "name": "azimuth",
-                "value": "40",
+                "value": "322",
                 "type": "num"
             },
             {
                 "name": "modules power",
-                "value": "100",
+                "value": "34",
                 "type": "num"
             },
             {
